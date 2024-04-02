@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { IoIosArrowForward } from "react-icons/io";
-import { ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react";
 
 const HeroSection = () => {
   const [count, setCount] = useState(0);
@@ -75,13 +75,18 @@ const HeroSection = () => {
               <div className="flex flex-row space-x-2 pt-2 gap-4">
                 <Image src="/kpsa.jpeg" alt="Logo 1" width={60} height={60} />{" "}
                 {/* Logos */}
-                <Image src="/mastercard.jpeg" alt="Logo 2" width={60} height={60} />
+                <Image
+                  src="/mastercard.jpeg"
+                  alt="Logo 2"
+                  width={60}
+                  height={60}
+                />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 md:pt-10">
+        <div className="pt-8 md:pt-4">
           <Button variant="destructive" size="xxl">
             Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
           </Button>
@@ -90,15 +95,17 @@ const HeroSection = () => {
 
       {/* image on large screens */}
       <div className="hidden lg:flex lg:w-1/2">
+      <div className="hidden lg:flex lg:w-3/4 pl-1/2 pt-10">
         <Image
           src="/kids.svg"
           layout="responsive"
-          width={3}
-          height={2}
+          width={2}
+          height={1}
           objectFit="contain"
           className="lg:block"
           alt="Kids Learning"
         />
+        </div>
       </div>
     </div>
   );
