@@ -22,39 +22,39 @@ function Footer() {
             </div>
           </div>
           <div className="text-center md:text-left">
-            <p className="text-gray-800 font-bold text-2xl pb-4">Product</p>
+            <p className="text-gray-800 font-bold text-2xl pb-4">Courses</p>
             <ul>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Stocks
+                Scratch Programming
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Futures & Options
+                Python for Kids
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Mutual Funds
+                Web Development
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Fixed deposits
+                Game Development
               </li>
             </ul>
           </div>
           <div className="text-center md:text-left">
-            <p className="text-gray-800 font-bold text-2xl pb-4">Company</p>
+            <p className="text-gray-800 font-bold text-2xl pb-4">About</p>
             <ul>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                About
+                Our Story
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Products
+                Our Teachers
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Pricing
+                Pricing Plans
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Careers
+                Career Opportunities
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Press & Media
+                News & Media
               </li>
             </ul>
           </div>
@@ -62,25 +62,25 @@ function Footer() {
             <p className="text-gray-800 font-bold text-2xl pb-4">Support</p>
             <ul>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Contact
+                Contact Us
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Support Portals
+                Help Center
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                List Of Charges
+                Course Fees
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Downloads & Resources
+                Learning Resources
               </li>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Videos
+                Tutorial Videos
               </li>
             </ul>
           </div>
         </div>
         <div className="flex flex-col justify-center items-center text-center mt-8">
-          <p className="text-gray-800 font-semibold text-sm md:text-base">
+        <p className="text-gray-800 font-semibold text-sm md:text-base">
             © {new Date().getFullYear()} All rights reserved | Build by RubyTech
             Solutions
           </p>
