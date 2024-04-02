@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&display=swap');
+
+
+
+
+body {
+    @apply font-sans;
+  }
+
+  /* Slide Animation */
+.mobile-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.-translate-x-full {
+  transform: translateX(-100%);
+}
+
+.mobile-menu.translate-x-0 {
+  transform: translateX(0);
+}
