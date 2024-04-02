@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0 bg-[#F3F5F9] lg:pt-10">
       {/* text */}
       <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-1/2 pt-10 lg:pt-20">
         <div className="lg:gap-4">
@@ -43,7 +43,7 @@ const HeroSection = () => {
         {/* image on small screens */}
         <div className="lg:hidden px-8">
           <Image
-            src="/kids.jpg"
+            src="/kids.svg"
             layout="responsive"
             width={800}
             height={600}
@@ -83,7 +83,7 @@ const HeroSection = () => {
 
         <div className="pt-8 md:pt-10">
           <Button variant="destructive" size="xxl">
-            Join Usss <ChevronRight className="ml-20 mr-0 h-6 w-6" />
+            Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
           </Button>
         </div>
       </div>
@@ -91,7 +91,7 @@ const HeroSection = () => {
       {/* image on large screens */}
       <div className="hidden lg:flex lg:w-1/2">
         <Image
-          src="/kids.jpg"
+          src="/kids.svg"
           layout="responsive"
           width={3}
           height={2}
