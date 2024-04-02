@@ -11,6 +11,7 @@ const Courses = () => {
   const courseCardWidth = useRef(null);
   const courseCards = useRef([]);
   const intervalId = useRef(null);
+  const isScrolling = useRef(false);
 
   useEffect(() => {
     const cards = Array.from(carouselRef.current.querySelectorAll(".courseCard"));
@@ -37,8 +38,25 @@ const Courses = () => {
     setCurrentIndex(index);
   };
 
+  const handleScroll = (e) => {
+    if (isScrolling.current) return;
+    isScrolling.current = true;
+
+    const direction = e.deltaY > 0 ? 1 : -1;
+    const newIndex = (currentIndex + direction + courseCards.current.length) % courseCards.current.length;
+
+    scrollToIndex(newIndex);
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 500);
+  };
+
   return (
-    <div className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-hidden mx-auto">
+    <div
+      className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-hidden mx-auto"
+      onWheel={handleScroll}
+    >
       <h2 className="font-bold text-2xl md:text-3xl mb-8 md:mb-10 text-center">Our Courses</h2>
       <div className="w-full flex flex-col items-center justify-center">
         <motion.div
