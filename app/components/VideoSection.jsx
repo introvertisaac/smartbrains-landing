@@ -9,7 +9,7 @@ export default function ModalVideo(props) {
   const videoRef = useRef(null);
 
   return (
-    <div className="relative flex flex-col justify-center items-center pt-20 sm:px-10 lg:px-1 lg:flex-row overflow-x-hidden">
+    <div className="relative flex flex-col justify-center items-center pt-20 sm:px-10 lg:px-1 lg:flex-row overflow-hidden">
       <Image
         src="/curve1.svg"
         className="absolute -top-20 left-8 h-3/5 w-1/3 z-10 hidden sm:hidden lg:block"
