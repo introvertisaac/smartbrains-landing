@@ -8,6 +8,7 @@
 
 body {
     @apply font-sans;
+    background-color: white;
   }
 
   /* Slide Animation */

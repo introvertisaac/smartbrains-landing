@@ -28,11 +28,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0 bg-[#F3F5F9] lg:pt-10">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0  lg:pt-10">
       {/* text */}
       <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-1/2 pt-10 lg:pt-20">
         <div className="lg:gap-4">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black">
+          <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-black">
             Crafting Futures through Coding for Kids
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-500 font-normal pt-4">
