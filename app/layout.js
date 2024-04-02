@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>{metadata.title}</title>
+        
         <meta name="description" content={metadata.description} />
         <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&display=swap" rel="stylesheet" />
       </head>
