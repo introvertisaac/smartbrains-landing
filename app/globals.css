@@ -9,6 +9,7 @@
 body {
     @apply font-sans;
     background-color: #F2F4F8;
+    overflow-x: hidden;
   }
 
   /* Slide Animation */
