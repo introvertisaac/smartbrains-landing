@@ -30,7 +30,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0">
       {/* text */}
-      <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-2/5 pt-10 lg:pt-20">
+      <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-1/2 pt-10 lg:pt-20">
         <div className="lg:gap-4">
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black">
             Crafting Futures through Coding for Kids
@@ -89,7 +89,7 @@ const HeroSection = () => {
       </div>
 
       {/* image on large screens */}
-      <div className="hidden lg:flex lg:w-3/5">
+      <div className="hidden lg:flex lg:w-1/2">
         <Image
           src="/kids.jpg"
           layout="responsive"
