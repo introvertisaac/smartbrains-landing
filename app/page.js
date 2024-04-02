@@ -20,11 +20,11 @@ export default function Home() {
           src: "https://res.cloudinary.com/doi21kvzt/video/upload/v1711188933/y2mate.com_-_Smart_Brains_Kenya_Founders_Intro_1080p_snankl.jpg",
           width: {
             mobile: 320,
-            lg: 500,
+            lg: 700,
           },
           height: {
             mobile: 160,
-            lg: 300,
+            lg: 500,
           },
           alt: "Thumbnail image description",
         }}
