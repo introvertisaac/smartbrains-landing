@@ -68,16 +68,16 @@ const Navbar = () => {
                 href="#"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
-                <Button variant="destructive" size="lg">
-                  About
+                <Button variant="ghost" size="lg">
+                Tutors Dash
                 </Button>
               </Link>
               <Link
                 href="#"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
-                <Button variant="destructive" size="lg">
-                  Contact
+                <Button variant="outline" size="lg">
+                   Join Class
                 </Button>
               </Link>
             </div>
@@ -109,12 +109,12 @@ const Navbar = () => {
             </Link>
             <Link href="#" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
-                About
+              Tutors Dash 
               </Button>
             </Link>
             <Link href="#" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
-                Contact
+              Join Class
               </Button>
             </Link>
           </div>
