@@ -1,15 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
-const Coursecard = ({ image, title, paragraph }) => (
-  <div className="rounded-lg cursor-pointer overflow-hidden shadow-lg w-64 h-80 mx-auto lg:max-w-full border-2 border-blue-500/50 flex flex-col">
-    <div className="w-full h-3/5 p-4">
-      <img className="w-full h-full object-scale-down" src={image} alt={title} />
-    </div>
-    <div className="px-6 py-10 flex-grow">
-      <div className="font-bold mb-2">{title}</div>
-      <p className="text-gray-700 text-base">{paragraph}</p>
-    </div>
-  </div>
-);
+const CourseCard = ({ image, title, paragraph }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-export default Coursecard;
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
+  const paragraphVariants = {
+    visible: { y: 0, opacity: 1 },
+    hidden: { y: '100%', opacity: 0 },
+  };
+
+  return (
+    <div
+      className="relative overflow-hidden rounded-lg shadow-lg w-64 h-80 mx-auto lg:max-w-full cursor-pointer"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <img className="w-full h-full object-cover" src={image} alt={title} />
+      <div className="absolute inset-0 flex flex-col justify-end items-center p-4">
+        <div className="flex items-center justify-center">
+          <h3 className="text-2xl font-bold text-white mr-2">{title}</h3>
+          {isHovered ? (
+            <FaArrowDown className="text-2xl text-white" />
+          ) : (
+            <FaArrowUp className="text-2xl text-white" />
+          )}
+        </div>
+        <motion.p
+          className="text-gray-200 text-center"
+          initial="hidden"
+          animate={isHovered ? 'visible' : 'hidden'}
+          variants={paragraphVariants}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+        >
+          {paragraph}
+        </motion.p>
+      </div>
+      <div
+        className={`absolute -inset-1 rounded-lg transition-all duration-300 ${
+          isHovered
+            ? 'border-8 border-blue-500 shadow-blue-500/50 shadow-inner shadow-2xl'
+            : 'border-2 border-blue-500/50 shadow-none'
+        }`}
+      />
+    </div>
+  );
+};
+
+export default CourseCard;

@@ -1,15 +1,16 @@
 "use client"
-import React, { useRef, useEffect } from "react";
-import Coursecard from "../(static)/CourseCard";
+import React, { useRef, useEffect, useState } from "react";
+import CourseCard from "../(static)/CourseCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Courses = () => {
   const carouselRef = useRef(null);
-  const isAnimating = useRef(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const courseCardWidth = useRef(null);
   const courseCards = useRef([]);
+  const intervalId = useRef(null);
 
   useEffect(() => {
     const cards = Array.from(carouselRef.current.querySelectorAll(".courseCard"));
@@ -19,29 +20,13 @@ const Courses = () => {
       courseCardWidth.current = cards[0].offsetWidth;
     }
 
-    const interval = setInterval(() => {
-      if (!isAnimating.current) {
-        isAnimating.current = true;
-        handleRightScroll();
-      }
-    }, 5000); // Change the interval as needed (in milliseconds)
+    // Start the automatic carousel
+    intervalId.current = setInterval(() => {
+      scrollToIndex((currentIndex + 1) % cards.length);
+    }, 5000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalId.current);
   }, []);
-
-  const handleLeftScroll = () => {
-    const currentIndex = getCurrentIndex();
-    const nextIndex = (currentIndex - 1 + courseCards.current.length) % courseCards.current.length;
-    scrollToIndex(nextIndex);
-    isAnimating.current = false;
-  };
-
-  const handleRightScroll = () => {
-    const currentIndex = getCurrentIndex();
-    const nextIndex = (currentIndex + 1) % courseCards.current.length;
-    scrollToIndex(nextIndex);
-    isAnimating.current = false;
-  };
 
   const scrollToIndex = (index) => {
     const scrollDistance = index * courseCardWidth.current;
@@ -49,43 +34,36 @@ const Courses = () => {
       left: scrollDistance,
       behavior: "smooth",
     });
-  };
-
-  const getCurrentIndex = () => {
-    const currentScrollLeft = carouselRef.current.scrollLeft;
-    return Math.round(currentScrollLeft / courseCardWidth.current);
+    setCurrentIndex(index);
   };
 
   return (
-    <div className="w-full h-auto flex flex-col justify-between items-center pt-24">
-      <div className="font-bold text-3xl mb-10">Our Courses</div>
-      <div className="w-full flex items-center justify-center">
-        <button
-          className="bg-gray-300 p-2 rounded-full lg:hidden"
-          onClick={handleLeftScroll}
+    <div className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-hidden mx-auto">
+      <h2 className="font-bold text-2xl md:text-3xl mb-8 md:mb-10 text-center">Our Courses</h2>
+      <div className="w-full flex flex-col items-center justify-center">
+        <motion.div
+          className="overflow-x-hidden flex scrollbar-none w-full justify-center"
+          ref={carouselRef}
         >
-          &lt;
-        </button>
-        <motion.div className="overflow-x-hidden flex scrollbar-none" ref={carouselRef}>
           {/* Grade 1, 2 & 3 */}
           <motion.div
-            className="flex flex-col items-center px-4 courseCard"
+            className="flex flex-col items-center px-2 md:px-4 courseCard"
             initial={{ opacity: 0.5, x: "-100%" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="font-semibold text-xl">For Grade 1, 2 & 3</p>
-            <div className="flex justify-center items-center align-middle">
-              <Image src="/lines.svg" height={120} width={80} />
+            <p className="font-semibold text-lg md:text-xl text-center">For Grade 1, 2 & 3</p>
+            <div className="flex justify-center items-center align-middle my-4 md:my-8">
+              <Image src="/lines.svg" height={120} width={80} alt="Lines" />
             </div>
-            <div className="flex flex-row justify-center mt-5 gap-8">
-              <Coursecard
-                image="/html.png"
+            <div className="flex flex-row justify-center gap-4 md:gap-8">
+              <CourseCard
+                image="/css.jpeg"
                 title="HTML"
-                paragraph="learn to make websites"
+                paragraph="Learn to make websites"
               />
-              <Coursecard
-                image="/css.png"
+              <CourseCard
+                image="/css.jpeg"
                 title="CSS"
                 paragraph="Style your websites"
               />
@@ -94,18 +72,18 @@ const Courses = () => {
 
           {/* Grade 4, 5 & 6 */}
           <motion.div
-            className="flex flex-col items-center px-4 courseCard"
+            className="flex flex-col items-center px-2 md:px-4 courseCard"
             initial={{ opacity: 0.5, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="font-semibold text-xl">For Grade 4, 5 & 6</p>
-            <div className="flex justify-center items-center align-middle">
-              <Image src="/lines.svg" height={120} width={80} />
+            <p className="font-semibold text-lg md:text-xl text-center">For Grade 4, 5 & 6</p>
+            <div className="flex justify-center items-center align-middle my-4 md:my-8">
+              <Image src="/lines.svg" height={120} width={80} alt="Lines" />
             </div>
-            <div className="flex flex-row justify-center mt-5">
-              <Coursecard
-                image="/android.png"
+            <div className="flex flex-row justify-center">
+              <CourseCard
+                image="/css.jpeg"
                 title="Android Development"
                 paragraph="Make mobile applications"
               />
@@ -114,32 +92,37 @@ const Courses = () => {
 
           {/* Grade 7 & 8 */}
           <motion.div
-            className="flex flex-col items-center px-4 courseCard"
+            className="flex flex-col items-center px-2 md:px-4 courseCard"
             initial={{ opacity: 0.5, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="font-semibold text-xl">For Grade 7 & 8</p>
-            <div className="flex justify-center items-center align-middle">
-              <Image src="/lines.svg" height={120} width={80} />
+            <p className="font-semibold text-lg md:text-xl text-center">For Grade 7 & 8</p>
+            <div className="flex justify-center items-center align-middle my-4 md:my-8">
+              <Image src="/lines.svg" height={120} width={80} alt="Lines" />
             </div>
-            <div className="flex flex-row justify-center mt-5">
-              <Coursecard
-                image="/robotics.png"
+            <div className="flex flex-row justify-center">
+              <CourseCard
+                image="/css.jpeg"
                 title="Robotics"
                 paragraph="Make your own robots"
               />
             </div>
           </motion.div>
         </motion.div>
-        <button
-          className="bg-gray-300 p-2 rounded-full lg:hidden"
-          onClick={handleRightScroll}
-        >
-          &gt;
-        </button>
+        <div className="flex mt-4 md:hidden">
+          {courseCards.current.map((_, index) => (
+            <div
+              key={index}
+              className={`w-2 h-2 md:w-3 md:h-3 mx-1 rounded-full cursor-pointer ${
+                index === currentIndex ? "bg-blue-500" : "bg-gray-300"
+              }`}
+              onClick={() => scrollToIndex(index)}
+            />
+          ))}
+        </div>
       </div>
-      <div className="pt-10">
+      <div className="pt-8 md:pt-10">
         <Button variant="destructive" size="lg">
           Join Us
         </Button>
