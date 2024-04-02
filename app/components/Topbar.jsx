@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes, FaEllipsisV } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
+import { RxDividerVertical } from "react-icons/rx";
+import { ChevronRight } from "lucide-react"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +34,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <img className="h-8 w-auto" src="/logo.png" alt="Logo" />
+              <img className="h-12 w-auto my-4" src="/logo.png" alt="Logo" />
             </Link>
           </div>
 
@@ -58,10 +60,10 @@ const Navbar = () => {
             <div className="ml-4 flex items-center md:ml-6">
               <Link href="#" className="px-3 py-2 rounded-md text-sm font-medium">
                 <Button variant="destructive" size="lg">
-                  Join Us
+                  Join Us  <ChevronRight  className="ml-20 mr-0 h-6 w-6" />
                 </Button>
               </Link>
-              <FaEllipsisV className="mx-4 text-gray-400" />
+              <RxDividerVertical size={30} className="mx-4 size-10 text-gray-400" />
               <Link
                 href="#"
                 className="px-3 py-2 rounded-md text-sm font-medium"

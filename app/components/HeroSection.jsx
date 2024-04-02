@@ -92,7 +92,7 @@ const HeroSection = () => {
       </div>
       </div>
       {/* image on large screens */}
-      <div className="hidden lg:flex flex-1 h-[600px] relative lg:mt-10 ">
+      <div className="hidden lg:flex flex-1 h-[800px] relative lg:mt-4 lg:mr-5 ">
         <Image
           src="/kids.jpg"
           layout="fill"
