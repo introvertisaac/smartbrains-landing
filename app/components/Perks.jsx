@@ -70,9 +70,9 @@ const Perks = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex flex-row justify-between gap-4 md:gap-8">
-              <PerksCard image="/css.jpeg"   paragraph="We provide laptops for every child" />
-              <PerksCard image="/css.jpeg"  title="Robotics" paragraph="We have well experienced coding teachers" />
-              <PerksCard image="/css.jpeg"  title="Robotics" paragraph="We have well experienced coding teachers" />
+              <PerksCard image="/laptops.jpeg"   paragraph="We provide laptops for every child" />
+              <PerksCard image="/teachers.jpeg"   paragraph="We have well experienced coding teachers" />
+              <PerksCard image="/collab.jpeg"   paragraph="We have well experienced coding teachers" />
             </div>
           </motion.div>
         </motion.div>

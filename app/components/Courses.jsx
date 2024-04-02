@@ -76,7 +76,7 @@ const Courses = () => {
             </div>
             <div className="flex flex-row justify-center gap-4 md:gap-8">
               <CourseCard
-                image="/css.jpeg"
+                image="/html.jpg"
                 title="HTML"
                 paragraph="Learn to make websites"
               />
@@ -101,7 +101,7 @@ const Courses = () => {
             </div>
             <div className="flex flex-row justify-center">
               <CourseCard
-                image="/css.jpeg"
+                image="/android.jpeg"
                 title="Android Development"
                 paragraph="Make mobile applications"
               />
@@ -121,7 +121,7 @@ const Courses = () => {
             </div>
             <div className="flex flex-row justify-center">
               <CourseCard
-                image="/css.jpeg"
+                image="/robotics.jpeg"
                 title="Robotics"
                 paragraph="Make your own robots"
               />
