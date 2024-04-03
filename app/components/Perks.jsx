@@ -77,11 +77,11 @@ const Perks = () => {
           ))}
         </div>
       </div>
-      <div className="pt-8 md:pt-10">
-        <Button variant="destructive" size="lg">
-          Join Us
-        </Button>
-      </div>
+      <div className="pt-8 md:pt-4">
+          <Button variant="destructive" size="xxl">
+            Join Us 
+          </Button>
+        </div>
     </div>
   );
 };

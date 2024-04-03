@@ -99,7 +99,7 @@ const Courses = () => {
         </div>
 
         {/* For Desktop and Larger Screens (>= 768px) */}
-        <div className="hidden md:flex md:flex-row md:justify-between md:w-full">
+        <div className="hidden md:flex md:flex-row md:justify-center md:w-full">
           <div className="px-2 md:px-4 courseCard">
             <motion.div
               className="flex flex-col items-center"
@@ -161,11 +161,11 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="pt-8 md:pt-10">
-        <Button variant="destructive" size="lg">
-          Join Us
-        </Button>
-      </div>
+      <div className="pt-8 md:pt-4">
+          <Button variant="destructive" size="xxl">
+            Join Us 
+          </Button>
+        </div>
     </div>
   );
 };

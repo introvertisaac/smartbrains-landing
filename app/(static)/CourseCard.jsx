@@ -19,25 +19,31 @@ const CourseCard = ({ image, title, paragraph }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img className="w-full h-full object-cover" src={image} alt={title} />
-      <div className="absolute inset-0 flex flex-col justify-end items-center p-4">
-        <div className="flex items-center justify-center">
-          <h3 className="text-2xl font-bold text-white mr-2">{title}</h3>
-          {isHovered ? (
-            <FaArrowDown className="text-2xl text-white" />
-          ) : (
-            <FaArrowUp className="text-2xl text-white" />
-          )}
-        </div>
-        <motion.p
-          className="text-gray-200 text-center"
-          initial="hidden"
-          animate={isHovered ? 'visible' : 'hidden'}
-          variants={paragraphVariants}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
+      <div className="relative w-full h-full">
+        <img className="w-full h-full object-cover" src={image} alt={title} />
+        <div
+          className={`absolute inset-0 flex flex-col justify-end items-center p-4 ${
+            isHovered ? 'bg-black/50' : ''
+          }`}
         >
-          {paragraph}
-        </motion.p>
+          <div className="flex items-center justify-center">
+            <h3 className="text-2xl font-bold text-white mr-2">{title}</h3>
+            {isHovered ? (
+              <FaArrowDown className="text-2xl text-white" />
+            ) : (
+              <FaArrowUp className="text-2xl text-white" />
+            )}
+          </div>
+          <motion.p
+            className="text-gray-200 text-center"
+            initial="hidden"
+            animate={isHovered ? 'visible' : 'hidden'}
+            variants={paragraphVariants}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+          >
+            {paragraph}
+          </motion.p>
+        </div>
       </div>
       <div
         className={`absolute -inset-1 rounded-lg transition-all duration-300 ${
