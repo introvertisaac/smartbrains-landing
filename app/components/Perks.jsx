@@ -1,4 +1,3 @@
-"use client"
 import React, { useRef, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import PerksCard from '../(static)/PerksCard';
@@ -59,9 +58,9 @@ const Perks = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex flex-row justify-between gap-4 md:gap-8">
-              <PerksCard image="/laptops.jpeg" paragraph="We provide laptops for every child" />
-              <PerksCard image="/teachers.jpeg" paragraph="We have well experienced coding teachers" />
-              <PerksCard image="/collab.jpeg" paragraph="We have well experienced coding teachers" />
+              <PerksCard image="/laptops.jpeg" paragraph="We provide laptops for every child to ensure they have access to the necessary tools for learning." />
+              <PerksCard image="/teachers.jpeg" paragraph="Our coding teachers are highly experienced professionals who are passionate about empowering young minds with coding skills." />
+              <PerksCard image="/collab.jpeg" paragraph="We foster a collaborative learning environment where students can engage with peers, share ideas, and work together on coding projects." />
             </div>
           </motion.div>
         </motion.div>

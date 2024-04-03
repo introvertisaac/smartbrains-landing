@@ -1,4 +1,3 @@
-"use client"
 import React, { useRef } from "react";
 import CourseCard from "../(static)/CourseCard";
 import { Button } from "@/components/ui/button";
@@ -48,8 +47,8 @@ const Courses = () => {
                   <Image src="/lines.svg" height={120} width={80} alt="Lines" />
                 </div>
                 <div className="flex flex-row justify-center gap-4 md:gap-8">
-                  <CourseCard image="/html.jpg" title="HTML" paragraph="Learn to make websites" />
-                  <CourseCard image="/css.jpeg" title="CSS" paragraph="Style your websites" />
+                  <CourseCard image="/html.jpg" title="HTML" paragraph="Learn to make websites and create fun web pages with interactive elements!" />
+                  <CourseCard image="/css.jpeg" title="CSS" paragraph="Explore the world of web design and learn how to style your websites to make them visually appealing!" />
                 </div>
               </motion.div>
             </div>
@@ -69,7 +68,7 @@ const Courses = () => {
                   <CourseCard
                     image="/android.jpeg"
                     title="Android Development"
-                    paragraph="Make mobile applications"
+                    paragraph="Dive into the world of mobile app development and learn how to create your own mobile applications!"
                   />
                 </div>
               </motion.div>
@@ -90,7 +89,7 @@ const Courses = () => {
                   <CourseCard
                     image="/robotics.jpeg"
                     title="Robotics"
-                    paragraph="Make your own robots"
+                    paragraph="Embark on an exciting journey into robotics and unleash your creativity by designing and building your own robots!"
                   />
                 </div>
               </motion.div>
@@ -112,8 +111,8 @@ const Courses = () => {
                 <Image src="/lines.svg" height={120} width={80} alt="Lines" />
               </div>
               <div className="flex flex-row justify-center gap-4 md:gap-8">
-                <CourseCard image="/html.jpg" title="HTML" paragraph="Learn to make websites" />
-                <CourseCard image="/css.jpeg" title="CSS" paragraph="Style your websites" />
+                <CourseCard image="/html.jpg" title="HTML" paragraph="Learn to make websites and create fun web pages with interactive elements!" />
+                <CourseCard image="/css.jpeg" title="CSS" paragraph="Explore the world of web design and learn how to style your websites to make them visually appealing!" />
               </div>
             </motion.div>
           </div>
@@ -133,7 +132,7 @@ const Courses = () => {
                 <CourseCard
                   image="/android.jpeg"
                   title="Android Development"
-                  paragraph="Make mobile applications"
+                  paragraph="Dive into the world of mobile app development and learn how to create your own mobile applications!"
                 />
               </div>
             </motion.div>
@@ -154,7 +153,7 @@ const Courses = () => {
                 <CourseCard
                   image="/robotics.jpeg"
                   title="Robotics"
-                  paragraph="Make your own robots"
+                  paragraph="Embark on an exciting journey into robotics and unleash your creativity by designing and building your own robots!"
                 />
               </div>
             </motion.div>
