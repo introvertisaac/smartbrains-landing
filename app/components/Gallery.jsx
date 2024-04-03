@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react"
 
 const GalleryCarousel = () => {
   const settings = {
@@ -49,6 +51,12 @@ const GalleryCarousel = () => {
     ],
   };
 
+  const handleClick = () => {
+    // Dispatch the 'openChat' event
+    window.dispatchEvent(new Event('openChat'));
+  };
+  
+
   return (
     <div className="mt-20 mx-auto max-w-7xl">
       <div className="flex h-10 items-center justify-center pb-10">
@@ -81,11 +89,11 @@ const GalleryCarousel = () => {
           ))}
         </Slider>
       </div>
-      <div className="pt-10 flex justify-center w-full">
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-          Join Us
-        </button>
-      </div>
+      <div className="pt-8 md:pt-4 w-full flex justify-center">
+          <Button variant="destructive" size="xxl" onClick={handleClick}>
+            Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
+          </Button>
+        </div>
     </div>
   );
 };

@@ -46,6 +46,12 @@ const Perks = () => {
     }, 500);
   };
 
+  const handleClick = () => {
+    // Dispatch the 'openChat' event
+    window.dispatchEvent(new Event('openChat'));
+  };
+  
+
   return (
     <div className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-hidden mx-auto" onWheel={handleScroll}>
       <h2 className="font-bold text-2xl md:text-3xl mb-8 md:mb-10 text-center">Why Schools Love Us</h2>
@@ -77,7 +83,7 @@ const Perks = () => {
         </div>
       </div>
       <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl">
+          <Button variant="destructive" size="xxl"  onClick={handleClick}>
             Join Us 
           </Button>
         </div>

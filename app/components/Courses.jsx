@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import { handleClick } from "@/components/Navbar";
 
 const Courses = () => {
   const sliderRef = useRef(null);
@@ -27,6 +28,12 @@ const Courses = () => {
       },
     ],
   };
+
+  const handleClick = () => {
+    // Dispatch the 'openChat' event
+    window.dispatchEvent(new Event('openChat'));
+  };
+  
 
   return (
     <div className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-x-hidden mx-auto">
@@ -161,7 +168,7 @@ const Courses = () => {
         </div>
       </div>
       <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl">
+          <Button variant="destructive" size="xxl" onClick={handleClick}>
             Join Us 
           </Button>
         </div>

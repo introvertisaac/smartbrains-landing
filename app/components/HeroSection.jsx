@@ -52,6 +52,11 @@ const HeroSection = () => {
     };
   }, []);
 
+  const handleClick = () => {
+    // Dispatch the 'openChat' event
+    window.dispatchEvent(new Event('openChat'));
+  };
+
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0 lg:pt-10 relative">
       {/* text */}
@@ -103,7 +108,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl">
+          <Button variant="destructive" size="xxl" onClick={handleClick}>
             Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
           </Button>
         </div>

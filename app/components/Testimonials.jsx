@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import testimonialsData from "../utils/testimonials";
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react"
 
 const Testimonials = () => {
   const settings = {
@@ -31,8 +33,13 @@ const Testimonials = () => {
     ],
   };
 
+  const handleClick = () => {
+    // Dispatch the 'openChat' event
+    window.dispatchEvent(new Event('openChat'));
+  };
+
   return (
-    <div className="mt-20 mx-auto max-w-7xl px-4 overflow-x-hidden" style={{ height: "480px" }}>
+    <div className="mt-20 mx-auto max-w-7xl px-4 overflow-x-hidden" style={{ height: "520px" }}>
       <div className="flex justify-center mb-8">
         <h2 className="text-3xl font-bold">What Our Customers Say</h2>
       </div>
@@ -74,6 +81,12 @@ const Testimonials = () => {
           font-size: 12px;
         }
       `}</style>
+
+<div className="pt-8 md:pt-4 w-full flex justify-center">
+          <Button variant="destructive" size="xxl" onClick={handleClick}>
+            Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
+          </Button>
+        </div>
       </div>
     </div>
   );
