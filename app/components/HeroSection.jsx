@@ -131,11 +131,11 @@ const HeroSection = () => {
       {/* Lottie animation container */}
       <div
         ref={lottieRef}
-        className="absolute bottom-[20%]  lg:right-20  w-20 h-20 lg:w-20 lg:h-20"
+        className="absolute bottom-[20%]  lg:right-10  w-10 h-10 lg:w-10 lg:h-10"
       />
       <div
         ref={lottieRef1}
-        className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20  w-20 h-20 lg:w-20 lg:h-20"
+        className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20  w-10 h-10 lg:w-20 lg:h-20"
       />
     </div>
   );
