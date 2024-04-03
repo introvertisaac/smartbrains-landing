@@ -1,5 +1,4 @@
 "use client"
-// Perks.jsx
 import React, { useRef, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import PerksCard from '../(static)/PerksCard';
@@ -16,7 +15,6 @@ const Perks = () => {
   useEffect(() => {
     const cards = Array.from(carouselRef.current.querySelectorAll('.perksCard'));
     perksCards.current = cards;
-
     if (cards.length > 0) {
       perksCardWidth.current = cards[0].offsetWidth;
     }
@@ -41,28 +39,19 @@ const Perks = () => {
   const handleScroll = (e) => {
     if (isScrolling.current) return;
     isScrolling.current = true;
-
     const direction = e.deltaY > 0 ? 1 : -1;
     const newIndex = (currentIndex + direction + perksCards.current.length) % perksCards.current.length;
-
     scrollToIndex(newIndex);
-
     setTimeout(() => {
       isScrolling.current = false;
     }, 500);
   };
 
   return (
-    <div
-      className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-hidden mx-auto"
-      onWheel={handleScroll}
-    >
+    <div className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-hidden mx-auto" onWheel={handleScroll}>
       <h2 className="font-bold text-2xl md:text-3xl mb-8 md:mb-10 text-center">Why Schools Love Us</h2>
       <div className="w-full flex flex-col items-center justify-center">
-        <motion.div
-          className="overflow-x-hidden flex scrollbar-none w-full justify-center"
-          ref={carouselRef}
-        >
+        <motion.div className="overflow-x-hidden flex scrollbar-none w-full justify-center" ref={carouselRef}>
           <motion.div
             className="flex flex-col items-center px-2 md:px-4 perksCard"
             initial={{ opacity: 0.5, x: '-100%' }}
@@ -70,9 +59,9 @@ const Perks = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex flex-row justify-between gap-4 md:gap-8">
-              <PerksCard image="/laptops.jpeg"   paragraph="We provide laptops for every child" />
-              <PerksCard image="/teachers.jpeg"   paragraph="We have well experienced coding teachers" />
-              <PerksCard image="/collab.jpeg"   paragraph="We have well experienced coding teachers" />
+              <PerksCard image="/laptops.jpeg" paragraph="We provide laptops for every child" />
+              <PerksCard image="/teachers.jpeg" paragraph="We have well experienced coding teachers" />
+              <PerksCard image="/collab.jpeg" paragraph="We have well experienced coding teachers" />
             </div>
           </motion.div>
         </motion.div>
