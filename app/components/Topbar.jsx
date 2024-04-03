@@ -27,6 +27,11 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  const handleClick = () => {
+    // Dispatch the 'openChat' event
+    window.dispatchEvent(new Event('openChat'));
+  };
+
   return (
     <nav className="bg-black shadow-md text-white relative py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,14 +63,15 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <Link href="#" className="px-3 py-2 rounded-md text-sm font-medium">
+              <Link onClick={handleClick} href="" className="px-3 py-2 rounded-md text-sm font-medium">
                 <Button variant="destructive" size="lg">
                   Join Us  <ChevronRight  className="ml-20 mr-0 h-6 w-6" />
                 </Button>
               </Link>
               <RxDividerVertical size={30} className="mx-4 size-10 text-gray-400" />
               <Link
-                href="#"
+                
+                href="https://sbs-tutor.web.app/auth"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Button variant="ghost" size="lg">
@@ -73,7 +79,7 @@ const Navbar = () => {
                 </Button>
               </Link>
               <Link
-                href="#"
+                href="https://smartbrains-ke.web.app/auth"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Button variant="outline" size="lg">
@@ -102,17 +108,17 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="px-4 pt-2 pb-6 space-y-4">
-            <Link href="#" className="block rounded-md text-base font-medium text-black">
+            <Link onClick={handleClick} href="#" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
                 Join Us
               </Button>
             </Link>
-            <Link href="#" className="block rounded-md text-base font-medium text-black">
+            <Link href="https://sbs-tutor.web.app/auth" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
               Tutors Dash 
               </Button>
             </Link>
-            <Link href="#" className="block rounded-md text-base font-medium text-black">
+            <Link href="https://smartbrains-ke.web.app/auth" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
               Join Class
               </Button>

@@ -11,6 +11,13 @@ const TawkChat = () => {
 
     const firstScript = document.getElementsByTagName('script')[0];
     firstScript.parentNode.insertBefore(script, firstScript);
+
+    // Listen for the 'openChat' event
+    window.addEventListener('openChat', () => {
+      if(window.Tawk_API) {
+        window.Tawk_API.maximize();
+      }
+    });
   }, []);
 
   return <div />;
