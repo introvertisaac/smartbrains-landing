@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Topbar from "./components/Topbar";
 import HeroSection from "./components/HeroSection";
@@ -10,6 +11,7 @@ import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
+import BackToTop from "./(static)/BacktoTop";
 
 export default function Home() {
   return (
@@ -49,6 +51,7 @@ export default function Home() {
       <Testimonials />
       <Faq />
       <Footer />
+      <BackToTop />
       <TawkChat />
     </>
   );

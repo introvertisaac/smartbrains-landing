@@ -112,7 +112,7 @@ const HeroSection = () => {
       <div className="hidden lg:flex lg:w-1/2">
         <div className="hidden lg:flex lg:w-3/4 pl-1/2 pt-10">
           <Image
-            src="/kids.svg"
+            src="/kids.jpg"
             layout="responsive"
             width={2}
             height={1}
@@ -126,11 +126,11 @@ const HeroSection = () => {
       {/* Lottie animation container */}
       <div
         ref={lottieRef}
-        className="absolute sm:bottom-1/3 lg:bottom-[20%]  lg:right-20 -z-30 w-20 h-20 lg:w-20 lg:h-20"
+        className="absolute bottom-[20%]  lg:right-20  w-20 h-20 lg:w-20 lg:h-20"
       />
       <div
         ref={lottieRef1}
-        className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20 -z-30 w-20 h-20 lg:w-20 lg:h-20"
+        className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20  w-20 h-20 lg:w-20 lg:h-20"
       />
     </div>
   );
