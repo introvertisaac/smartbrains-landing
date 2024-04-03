@@ -15,24 +15,20 @@ const CourseCard = ({ image, title, paragraph }) => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg shadow-lg w-64 h-80 mx-auto lg:max-w-full cursor-pointer"
+      className="relative overflow-hidden rounded-lg shadow-lg w-64 h-80 mx-auto lg:max-w-full cursor-pointer  text-center "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative w-full h-full">
-        <img className="w-full h-full object-cover" src={image} alt={title} />
+        <img className="w-full h-full object-cover flex justify-center text-center shadow-blue-500/50 items-center" src={image} alt={title} />
         <div
           className={`absolute inset-0 flex flex-col justify-end items-center p-4 ${
             isHovered ? 'bg-black/50' : ''
           }`}
         >
           <div className="flex items-center justify-center">
-            <h3 className="text-2xl font-bold text-white mr-2">{title}</h3>
-            {isHovered ? (
-              <FaArrowDown className="text-2xl text-white" />
-            ) : (
-              <FaArrowUp className="text-2xl text-white" />
-            )}
+            <h3 className="text-2xl font-bold text-white shadow-blue-500 mr-2">{title}</h3>
+            
           </div>
           <motion.p
             className="text-gray-200 text-center"
