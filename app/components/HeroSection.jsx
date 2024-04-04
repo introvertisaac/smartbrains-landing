@@ -63,16 +63,16 @@ const HeroSection = () => {
       <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-1/2 pt-10 lg:pt-20">
         <div className="lg:gap-4">
           <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-black">
-            Crafting Futures through Coding for Kids
+            Crafting Futures through Coding
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-500 font-normal pt-4">
-            We empower schools to teach Computer Science <br /> successfully
+            We empower schools to teach Computer Science 
           </p>
         </div>
         {/* image on small screens */}
         <div className="lg:hidden px-8">
           <Image
-            src="/kids.svg"
+            src="/kids.png"
             layout="responsive"
             width={800}
             height={600}
@@ -117,10 +117,10 @@ const HeroSection = () => {
       <div className="hidden lg:flex lg:w-1/2">
         <div className="hidden lg:flex lg:w-3/4 pl-1/2 pt-10">
           <Image
-            src="/kids.jpg"
+            src="/kids.png"
             layout="responsive"
-            width={2}
-            height={1}
+            width={4}
+            height={2}
             objectFit="contain"
             className="lg:block"
             alt="Kids Learning"
@@ -129,14 +129,14 @@ const HeroSection = () => {
       </div>
 
       {/* Lottie animation container */}
-      <div
+      {/* <div
         ref={lottieRef}
         className="absolute bottom-[20%]  lg:right-10  w-10 h-10 lg:w-10 lg:h-10"
       />
       <div
         ref={lottieRef1}
         className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20  w-10 h-10 lg:w-20 lg:h-20"
-      />
+      /> */}
     </div>
   );
 };

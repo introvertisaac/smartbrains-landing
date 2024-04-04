@@ -1,53 +1,28 @@
-import React, { useState } from 'react';
-import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
-const CourseCard = ({ image, title, paragraph }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
-
-  const paragraphVariants = {
-    visible: { y: 0, opacity: 1 },
-    hidden: { y: '100%', opacity: 0 },
-  };
-
+const CourseCard = ({ logo, title, subtitle, buttonText, buttonOnClick, backgroundImage }) => {
   return (
     <div
-      className="relative overflow-hidden rounded-lg shadow-lg w-64 h-80 mx-auto lg:max-w-full cursor-pointer  text-center "
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="flex flex-col items-center justify-between rounded-lg shadow-lg mx-auto py-4 px-6 md:py-8 md:px-10 relative"
+      style={{
+        width: '300px', // Fixed width for mobile
+        maxWidth: '400px', // Fixed width for desktop
+      }}
     >
-      <div className="relative w-full h-full">
-        <img className="w-full h-full object-cover flex justify-center text-center shadow-blue-500/50 items-center" src={image} alt={title} />
-        <div
-          className={`absolute inset-0 flex flex-col justify-end items-center p-4 ${
-            isHovered ? 'bg-black/50' : ''
-          }`}
-        >
-          <div className="flex items-center justify-center">
-            <h3 className="text-2xl font-bold text-white shadow-blue-500 mr-2">{title}</h3>
-            
-          </div>
-          <motion.p
-            className="text-gray-200 text-center"
-            initial="hidden"
-            animate={isHovered ? 'visible' : 'hidden'}
-            variants={paragraphVariants}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-          >
-            {paragraph}
-          </motion.p>
-        </div>
-      </div>
       <div
-        className={`absolute -inset-1 rounded-lg transition-all duration-300 ${
-          isHovered
-            ? 'border-8 border-blue-500 shadow-blue-500/50 shadow-inner shadow-2xl'
-            : 'border-2 border-blue-500/50 shadow-none'
-        }`}
+        className="absolute inset-0 bg-cover bg-center rounded-lg"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       />
+      <div className="bg-white rounded-full p-2 my-2 relative z-10">
+        <Image src={logo} alt={title} width={80} height={80} className="rounded-full" />
+      </div>
+      <div className="flex flex-col items-center justify-center relative z-10">
+        <h2 className="text-xl font-bold mb-2 text-center">{title}</h2>
+        <h3 className="text-lg font-semibold mb-4 text-center">{subtitle}</h3>
+        <Button variant="coursesbtngreen" size="thin" onClick={buttonOnClick}>{buttonText}</Button>
+      </div>
     </div>
   );
 };

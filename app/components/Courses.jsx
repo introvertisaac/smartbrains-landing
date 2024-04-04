@@ -1,16 +1,14 @@
-import React, { useRef } from "react";
-import CourseCard from "../(static)/CourseCard";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-// import { handleClick } from "@/components/Navbar";
+import React, { useRef } from 'react';
+import CourseCard from '../(static)/CourseCard';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Courses = () => {
   const sliderRef = useRef(null);
-
   const settings = {
     dots: true,
     infinite: true,
@@ -28,12 +26,23 @@ const Courses = () => {
       },
     ],
   };
-
   const handleClick = () => {
-    // Dispatch the 'openChat' event
     window.dispatchEvent(new Event('openChat'));
   };
-  
+  const coursesData = [
+    { logo: '/html1.png', title: 'HTML', subtitle: 'Learn to make websites', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient.svg', grade: 'Grade 1,2,3' },
+    { logo: '/css.jpeg', title: 'CSS', subtitle: 'Explore web design', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient1.svg', grade: 'Grade 1,2,3' },
+    { logo: '/android1.jpeg', title: 'Android Development', subtitle: 'Build mobile apps', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient.svg', grade: 'Grade 4,5,6' },
+    { logo: '/robotics.jpeg', title: 'Robotics', subtitle: 'Design and build robots', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient1.svg', grade: 'Grade 7,8,9' },
+  ];
+
+  const groupedCourses = coursesData.reduce((acc, course) => {
+    if (!acc[course.grade]) {
+      acc[course.grade] = [];
+    }
+    acc[course.grade].push(course);
+    return acc;
+  }, {});
 
   return (
     <div className="w-full flex flex-col justify-between items-center py-8 md:py-16 overflow-x-hidden mx-auto">
@@ -42,136 +51,52 @@ const Courses = () => {
         {/* For Mobile and Small Screens (< 768px) */}
         <div className="w-full md:hidden">
           <Slider {...settings} ref={sliderRef} className="w-full">
-            <div className="px-2 md:px-4 courseCard">
-              <motion.div
-                className="flex flex-col items-center"
-                initial={{ opacity: 0.5, x: "-100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <p className="font-semibold text-lg md:text-xl text-center">For Grade 1, 2 & 3</p>
-                <div className="flex justify-center items-center align-middle my-4 md:my-8">
-                  <Image src="/lines.svg" height={120} width={80} alt="Lines" />
-                </div>
-                <div className="flex flex-row justify-center gap-4 md:gap-8">
-                  <CourseCard image="/html.jpg" title="HTML" paragraph="Learn to make websites and create fun web pages with interactive elements!" />
-                  <CourseCard image="/css.jpeg" title="CSS" paragraph="Explore the world of web design and learn how to style your websites to make them visually appealing!" />
-                </div>
-              </motion.div>
-            </div>
-
-            <div className="px-2 md:px-4 courseCard">
-              <motion.div
-                className="flex flex-col items-center"
-                initial={{ opacity: 0.5, x: "100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <p className="font-semibold text-lg md:text-xl text-center">For Grade 4, 5 & 6</p>
-                <div className="flex justify-center items-center align-middle my-4 md:my-8">
-                  <Image src="/lines.svg" height={120} width={80} alt="Lines" />
-                </div>
-                <div className="flex flex-row justify-center">
-                  <CourseCard
-                    image="/android.jpeg"
-                    title="Android Development"
-                    paragraph="Dive into the world of mobile app development and learn how to create your own mobile applications!"
-                  />
-                </div>
-              </motion.div>
-            </div>
-
-            <div className="px-2 md:px-4 courseCard">
-              <motion.div
-                className="flex flex-col items-center"
-                initial={{ opacity: 0.5, x: "100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <p className="font-semibold text-lg md:text-xl text-center">For Grade 7 & 8</p>
-                <div className="flex justify-center items-center align-middle my-4 md:my-8">
-                  <Image src="/lines.svg" height={120} width={80} alt="Lines" />
-                </div>
-                <div className="flex flex-row justify-center">
-                  <CourseCard
-                    image="/robotics.jpeg"
-                    title="Robotics"
-                    paragraph="Embark on an exciting journey into robotics and unleash your creativity by designing and building your own robots!"
-                  />
-                </div>
-              </motion.div>
-            </div>
+            {coursesData.map((course, index) => (
+              <div key={index} className="px-2 md:px-4 courseCard">
+                <CourseCard
+                  logo={course.logo}
+                  title={course.title}
+                  subtitle={course.subtitle}
+                  buttonText={course.buttonText}
+                  buttonOnClick={course.buttonOnClick}
+                  backgroundImage={course.backgroundImage}
+                />
+              </div>
+            ))}
           </Slider>
         </div>
 
         {/* For Desktop and Larger Screens (>= 768px) */}
         <div className="hidden md:flex md:flex-row md:justify-center md:w-full">
-          <div className="px-2 md:px-4 courseCard">
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0.5, x: "-100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <p className="font-semibold text-lg md:text-xl text-center">For Grade 1, 2 & 3</p>
-              <div className="flex justify-center items-center align-middle my-4 md:my-8">
-                <Image src="/lines.svg" height={120} width={80} alt="Lines" />
+          {Object.entries(groupedCourses).map(([grade, courses]) => (
+            <div key={grade} className="flex flex-col items-center mb-4 px-2">
+              <h3 className="font-bold text-lg mb-2 text-center">{grade}</h3>
+              <div className="flex flex-wrap justify-center">
+                {courses.map((course, index) => (
+                  <div key={index} className="px-1 courseCard">
+                    <CourseCard
+                      logo={course.logo}
+                      title={course.title}
+                      subtitle={course.subtitle}
+                      buttonText={course.buttonText}
+                      buttonOnClick={course.buttonOnClick}
+                      backgroundImage={course.backgroundImage}
+                    />
+                  </div>
+                ))}
               </div>
-              <div className="flex flex-row justify-center gap-4 md:gap-8">
-                <CourseCard image="/html.jpg" title="HTML" paragraph="Learn to make websites and create fun web pages with interactive elements!" />
-                <CourseCard image="/css.jpeg" title="CSS" paragraph="Explore the world of web design and learn how to style your websites to make them visually appealing!" />
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="px-2 md:px-4 courseCard">
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0.5, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <p className="font-semibold text-lg md:text-xl text-center">For Grade 4, 5 & 6</p>
-              <div className="flex justify-center items-center align-middle my-4 md:my-8">
-                <Image src="/lines.svg" height={120} width={80} alt="Lines" />
-              </div>
-              <div className="flex flex-row justify-center">
-                <CourseCard
-                  image="/android.jpeg"
-                  title="Android Development"
-                  paragraph="Dive into the world of mobile app development and learn how to create your own mobile applications!"
-                />
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="px-2 md:px-4 courseCard">
-            <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0.5, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <p className="font-semibold text-lg md:text-xl text-center">For Grade 7 & 8</p>
-              <div className="flex justify-center items-center align-middle my-4 md:my-8">
-                <Image src="/lines.svg" height={120} width={80} alt="Lines" />
-              </div>
-              <div className="flex flex-row justify-center">
-                <CourseCard
-                  image="/robotics.jpeg"
-                  title="Robotics"
-                  paragraph="Embark on an exciting journey into robotics and unleash your creativity by designing and building your own robots!"
-                />
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
+      <div className="flex justify-center mt-8">
+        <Image src="/lines.svg" alt="Arrow" width={50} height={50} className="mx-auto" />
+      </div>
       <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl" onClick={handleClick}>
-            Join Us 
-          </Button>
-        </div>
+        <Button variant="destructive" size="xxl" onClick={handleClick}>
+          Join Us
+        </Button>
+      </div>
     </div>
   );
 };

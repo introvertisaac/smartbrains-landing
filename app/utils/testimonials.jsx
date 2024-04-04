@@ -5,7 +5,7 @@ const testimonialsData = [
       position: 'CEO, Company',
       testimonial: `Great for our kids to learn coding and build digital skills.`,
       rating: 5,
-      image: '/kpsa.jpeg',
+      image: '/woman.svg',
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const testimonialsData = [
         position: 'CEO, Company',
         testimonial: `These classes empower our kids to be innovative and tech-savvy.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/man.svg',
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const testimonialsData = [
         position: 'Manager, Company',
         testimonial: `Kids gain a deep understanding of technology through these classes.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/woman.svg',
     },
     {
       id: 4,
@@ -29,7 +29,7 @@ const testimonialsData = [
       position: 'Head of Operations, Tech Firm',
       testimonial: `Remarkable impact on our kids; they're learning problem-solving and critical thinking.`,
       rating: 5,
-      image: '/kpsa.jpeg',
+      image: '/man.svg',
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const testimonialsData = [
         position: 'Tech Enthusiast',
         testimonial: `Impressive curriculum; shaping the future of our tech industry.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/woman.svg',
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const testimonialsData = [
         position: 'Parent',
         testimonial: `Enrolling my child was one of the best decisions; they're gaining confidence and independence.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/man.svg',
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const testimonialsData = [
         position: 'Educator',
         testimonial: `Essential for equipping kids with skills for life; paving the way for a brighter future.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/woman.svg',
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const testimonialsData = [
         position: 'IT Professional',
         testimonial: `Solid foundation for kids to explore tech interests; excited to see future tech leaders.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/man.svg',
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const testimonialsData = [
         position: 'School Administrator',
         testimonial: `Game-changer for our school curriculum; kids are engaged and developing invaluable skills.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/woman.svg',
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const testimonialsData = [
         position: 'Software Developer',
         testimonial: `Nurturing the next generation of innovators; inspiring to see kids exploring new ideas.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/man.svg',
     },
     {
         id: 11,
@@ -85,7 +85,7 @@ const testimonialsData = [
         position: 'Student',
         testimonial: `Incredible journey; gained confidence and made new friends with shared interests.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/woman.svg',
     },
     {
         id: 12,
@@ -93,7 +93,7 @@ const testimonialsData = [
         position: 'Community Leader',
         testimonial: `Significant difference in our community; empowering kids to pursue their passions in technology.`,
         rating: 5,
-        image: '/kpsa.jpeg',
+        image: '/man.svg',
     },
   ];
   

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import CourseCard from "../(static)/CourseCard";
+import PerksCard from "../(static)/PerksCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -40,7 +40,7 @@ const Courses = () => {
         {/* For Mobile and Small Screens (< 768px) */}
         <div className="w-full md:hidden">
           <Slider {...settings} ref={sliderRef} className="w-full">
-            <div className="px-2 md:px-4 courseCard">
+            <div className="px-2 md:px-4 PerksCard">
               <motion.div
                 className="flex flex-col items-center"
                 initial={{ opacity: 0.5, x: "-100%" }}
@@ -48,7 +48,10 @@ const Courses = () => {
                 transition={{ duration: 0.8 }}
               >
                 <div className="flex flex-row justify-center gap-4 md:gap-8">
-                  <CourseCard image="/kids1.jpg" title="We provide Laptops to every Child" paragraph="Our coding program ensures that every child has access to a laptop, enabling them to engage actively in learning and practice coding skills effectively." />
+                  <PerksCard image="/kids1.jpg" 
+                  
+                  //  title="We provide Laptops to every Child" paragraph="Our coding program ensures that every child has access to a laptop, enabling them to engage actively in learning and practice coding skills effectively."
+                   />
                 </div>
                 <div className="flex justify-center items-center align-middle my-4 md:my-8">
                   <Image src="/lines.svg" height={120} width={80} alt="Lines" />
@@ -57,7 +60,7 @@ const Courses = () => {
               </motion.div>
             </div>
 
-            <div className="px-2 md:px-4 courseCard">
+            <div className="px-2 md:px-4 PerksCard">
               <motion.div
                 className="flex flex-col items-center"
                 initial={{ opacity: 0.5, x: "100%" }}
@@ -65,10 +68,10 @@ const Courses = () => {
                 transition={{ duration: 0.8 }}
               >
                 <div className="flex flex-row justify-center">
-                  <CourseCard
+                  <PerksCard
                     image="/kids-coding.jpg"
-                    title="We provide a collaboration environment"
-                    paragraph="Our coding program fosters collaboration among students by providing a supportive environment where they can share ideas, work together on projects, and learn from each other's experiences."
+                    // title="We provide a collaboration environment"
+                    // paragraph="Our coding program fosters collaboration among students by providing a supportive environment where they can share ideas, work together on projects, and learn from each other's experiences."
                   />
                 </div>
                 <div className="flex justify-center items-center align-middle my-4 md:my-8">
@@ -78,7 +81,7 @@ const Courses = () => {
               </motion.div>
             </div>
 
-            <div className="px-2 md:px-4 courseCard">
+            <div className="px-2 md:px-4 PerksCard">
               <motion.div
                 className="flex flex-col items-center"
                 initial={{ opacity: 0.5, x: "100%" }}
@@ -86,10 +89,10 @@ const Courses = () => {
                 transition={{ duration: 0.8 }}
               >
                 <div className="flex flex-row justify-center">
-                  <CourseCard
+                  <PerksCard
                     image="/teacher.jpg"
-                    title="Adequate and well-trained teachers"
-                    paragraph="Our coding program is led by experienced and well-trained teachers who are dedicated to providing quality education and support to every child, ensuring effective learning outcomes."
+                    // title="Adequate and well-trained teachers"
+                    // paragraph="Our coding program is led by experienced and well-trained teachers who are dedicated to providing quality education and support to every child, ensuring effective learning outcomes."
                   />
                 </div>
                 <div className="flex justify-center items-center align-middle my-4 md:my-8">
@@ -103,7 +106,7 @@ const Courses = () => {
 
         {/* For Desktop and Larger Screens (>= 768px) */}
         <div className="hidden md:flex md:flex-row md:justify-center md:w-full">
-          <div className="px-2 md:px-4 courseCard">
+          <div className="px-2 md:px-4 PerksCard">
             <motion.div
               className="flex flex-col items-center"
               initial={{ opacity: 0.5, x: "-100%" }}
@@ -111,7 +114,9 @@ const Courses = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="flex flex-row justify-center gap-4 md:gap-8">
-                <CourseCard image="/kids1.jpg" title="We provide Laptops to every Child" paragraph="Our coding program ensures that every child has access to a laptop, enabling them to engage actively in learning and practice coding skills effectively." />
+                <PerksCard image="/kids1.jpg" 
+                // title="We provide Laptops to every Child" paragraph="Our coding program ensures that every child has access to a laptop, enabling them to engage actively in learning and practice coding skills effectively."
+                 />
               </div>
               <div className="flex justify-center items-center align-middle my-4 md:my-8">
                 <Image src="/lines.svg" height={120} width={80} alt="Lines" />
@@ -120,7 +125,7 @@ const Courses = () => {
             </motion.div>
           </div>
 
-          <div className="px-2 md:px-4 courseCard">
+          <div className="px-2 md:px-4 PerksCard">
             <motion.div
               className="flex flex-col items-center"
               initial={{ opacity: 0.5, x: "100%" }}
@@ -128,10 +133,10 @@ const Courses = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="flex flex-row justify-center">
-                <CourseCard
+                <PerksCard
                   image="/kids-coding.jpg"
-                  title="We provide a collaboration environment"
-                  paragraph="Our coding program fosters collaboration among students by providing a supportive environment. "
+                  // title="We provide a collaboration environment"
+                  // paragraph="Our coding program fosters collaboration among students by providing a supportive environment. "
                 />
               </div>
               <div className="flex justify-center items-center align-middle my-4 md:my-8">
@@ -141,7 +146,7 @@ const Courses = () => {
             </motion.div>
           </div>
 
-          <div className="px-2 md:px-4 courseCard">
+          <div className="px-2 md:px-4 PerksCard">
             <motion.div
               className="flex flex-col items-center"
               initial={{ opacity: 0.5, x: "100%" }}
@@ -149,10 +154,10 @@ const Courses = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="flex flex-row justify-center">
-                <CourseCard
+                <PerksCard
                   image="/teacher.jpg"
-                  title="Adequate and well-trained teachers"
-                  paragraph="Our coding program is led by experienced and well-trained teachers who are dedicated to providing quality education and support to every child, ensuring effective learning outcomes."
+                  // title="Adequate and well-trained teachers"
+                  // paragraph="Our coding program is led by experienced and well-trained teachers who are dedicated to providing quality education and support to every child, ensuring effective learning outcomes."
                 />
               </div>
               <div className="flex justify-center items-center align-middle my-4 md:my-8">

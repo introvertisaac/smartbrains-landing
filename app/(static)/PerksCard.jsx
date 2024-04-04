@@ -1,9 +1,8 @@
-"use client"
 import React, { useState } from 'react';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-const PerksCard = ({ image, paragraph }) => {
+const PerksCard = ({ image, title, paragraph }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => setIsHovered(true);
@@ -16,23 +15,20 @@ const PerksCard = ({ image, paragraph }) => {
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg shadow-lg w-64 h-80 mx-auto lg:max-w-full cursor-pointer"
+      className="relative overflow-hidden rounded-lg shadow-lg w-64 h-80 mx-auto lg:max-w-full cursor-pointer  text-center "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative w-full h-full">
-        <img className="w-full h-full object-cover" src={image} alt={paragraph} />
+        <img className="w-full h-full object-cover flex justify-center text-center shadow-blue-100/50 items-center" src={image} alt={title} />
         <div
           className={`absolute inset-0 flex flex-col justify-end items-center p-4 ${
-            isHovered ? 'bg-black/50' : ''
+            isHovered ? 'bg-gray/50' : ''
           }`}
         >
           <div className="flex items-center justify-center">
-            {isHovered ? (
-              <FaArrowDown className="text-2xl text-white" />
-            ) : (
-              <FaArrowUp className="text-2xl text-white" />
-            )}
+            <h3 className="text-2xl font-bold text-white  mr-2">{title}</h3>
+            
           </div>
           <motion.p
             className="text-gray-200 text-center"
@@ -48,8 +44,8 @@ const PerksCard = ({ image, paragraph }) => {
       <div
         className={`absolute -inset-1 rounded-lg transition-all duration-300 ${
           isHovered
-            ? 'border-8 border-blue-500 shadow-blue-500/50 shadow-inner shadow-2xl'
-            : 'border-2 border-blue-500/50 shadow-none'
+            ? 'border-8  shadow-inner shadow-2xl'
+            : 'border-2  shadow-none'
         }`}
       />
     </div>
