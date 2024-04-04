@@ -105,25 +105,25 @@ const cards = [
   {
     url: "/2.jpeg",
     title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
+    logo: "/stbhakita.jpeg",
     id: 1,
   },
   {
     url: "/4.jpeg",
     title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
+    logo: "/stbhakita.jpeg",
     id: 2,
   },
   {
     url: "/4.webp",
     title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
+    logo: "/stbhakita.jpeg",
     id: 3,
   },
   {
     url: "/5.jpg",
     title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
+    logo: "/stbhakita.jpeg",
     id: 4,
   },
   // {
