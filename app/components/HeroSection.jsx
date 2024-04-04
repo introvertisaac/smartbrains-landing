@@ -58,7 +58,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0 lg:pt-10 relative">
+    <div className="flex   pb-0 lg:pb-10  flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0 lg:pt-10 relative">
       {/* text */}
       <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-1/2 pt-10 lg:pt-20">
         <div className="lg:gap-4">
@@ -72,7 +72,7 @@ const HeroSection = () => {
         {/* image on small screens */}
         <div className="lg:hidden px-8">
           <Image
-            src="/kids.svg"
+            src="/kids.png"
             layout="responsive"
             width={800}
             height={600}
@@ -117,7 +117,7 @@ const HeroSection = () => {
       <div className="hidden lg:flex lg:w-1/2">
         <div className="hidden lg:flex lg:w-3/4 pl-1/2 pt-10">
           <Image
-            src="/kids.svg"
+            src="/kids.png"
             layout="responsive"
             width={2}
             height={1}

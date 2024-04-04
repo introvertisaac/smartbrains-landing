@@ -75,7 +75,7 @@ const Navbar = () => {
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Button variant="ghost" size="lg">
-                Tutors Dash
+                Join Class
                 </Button>
               </Link>
               <Link
@@ -83,7 +83,7 @@ const Navbar = () => {
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Button variant="outline" size="lg">
-                   Join Class
+                   Tutors Dash
                 </Button>
               </Link>
             </div>
@@ -115,12 +115,12 @@ const Navbar = () => {
             </Link>
             <Link href="https://sbs-tutor.web.app/auth" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
-              Tutors Dash 
+              Join Class 
               </Button>
             </Link>
             <Link href="https://smartbrains-ke.web.app/auth" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
-              Join Class
+              Tutors Dash 
               </Button>
             </Link>
           </div>
