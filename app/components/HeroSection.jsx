@@ -29,21 +29,21 @@ const HeroSection = () => {
     }, stepTime);
 
     // Initialize Lottie animation
-    const lottieInstance = Lottie.loadAnimation({
-      container: lottieRef.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("../../public/anim3.json"),
-    });
+    // const lottieInstance = Lottie.loadAnimation({
+    //   container: lottieRef.current,
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: require("../../public/anim3.json"),
+    // });
 
-    const lottieInstance1 = Lottie.loadAnimation({
-      container: lottieRef1.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("../../public/anim3.json"),
-    });
+    // const lottieInstance1 = Lottie.loadAnimation({
+    //   container: lottieRef1.current,
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: require("../../public/anim3.json"),
+    // });
 
     return () => {
       clearInterval(timer);
