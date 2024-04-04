@@ -91,7 +91,8 @@ const GalleryCarousel = () => {
       </div>
       <div className="pt-8 md:pt-4 w-full flex justify-center">
           <Button variant="destructive" size="xxl" onClick={handleClick}>
-            Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
+            Browse More 
+            {/* <ChevronRight className="ml-20 mr-0 h-6 w-6" /> */}
           </Button>
         </div>
     </div>
@@ -102,45 +103,45 @@ export default GalleryCarousel;
 
 const cards = [
   {
-    url: "/coding.jpg",
+    url: "/2.jpeg",
     title: "St. Bhakita School",
     logo: "/kpsa.jpeg",
     id: 1,
   },
   {
-    url: "/coding.jpg",
+    url: "/4.jpeg",
     title: "St. Bhakita School",
     logo: "/kpsa.jpeg",
     id: 2,
   },
   {
-    url: "/coding.jpg",
+    url: "/4.webp",
     title: "St. Bhakita School",
     logo: "/kpsa.jpeg",
     id: 3,
   },
   {
-    url: "/coding.jpg",
+    url: "/5.jpg",
     title: "St. Bhakita School",
     logo: "/kpsa.jpeg",
     id: 4,
   },
-  {
-    url: "/coding.jpg",
-    title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
-    id: 5,
-  },
-  {
-    url: "/coding.jpg",
-    title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
-    id: 6,
-  },
-  {
-    url: "/coding.jpg",
-    title: "St. Bhakita School",
-    logo: "/kpsa.jpeg",
-    id: 7,
-  },
+  // {
+  //   url: "/5.jpg",
+  //   title: "St. Bhakita School",
+  //   logo: "/kpsa.jpeg",
+  //   id: 5,
+  // },
+  // {
+  //   url: "/coding.jpg",
+  //   title: "St. Bhakita School",
+  //   logo: "/kpsa.jpeg",
+  //   id: 6,
+  // },
+  // {
+  //   url: "/coding.jpg",
+  //   title: "St. Bhakita School",
+  //   logo: "/kpsa.jpeg",
+  //   id: 7,
+  // },
 ];
