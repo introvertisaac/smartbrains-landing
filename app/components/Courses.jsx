@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import CourseCard from '../(static)/CourseCard';
+import CourseCard from '../shared/CourseCard';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -31,7 +31,7 @@ const Courses = () => {
   };
   const coursesData = [
     { logo: '/html1.png', title: 'HTML', subtitle: 'Learn to make websites', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient.svg', grade: 'Grade 1,2,3' },
-    { logo: '/css.jpeg', title: 'CSS', subtitle: 'Explore web design', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient1.svg', grade: 'Grade 1,2,3' },
+    { logo: '/css.jpeg', title: 'CSS', subtitle: 'Explore web design', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient1.svg', grade: 'Grade 1,2,3 (Intermediate)' },
     { logo: '/android1.jpeg', title: 'Android Development', subtitle: 'Build mobile apps', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient.svg', grade: 'Grade 4,5,6' },
     { logo: '/robotics.jpeg', title: 'Robotics', subtitle: 'Design and build robots', buttonText: 'Read More', buttonOnClick: handleClick, backgroundImage: '/card-gradient1.svg', grade: 'Grade 7,8,9' },
   ];
@@ -51,16 +51,21 @@ const Courses = () => {
         {/* For Mobile and Small Screens (< 768px) */}
         <div className="w-full md:hidden">
           <Slider {...settings} ref={sliderRef} className="w-full">
-            {coursesData.map((course, index) => (
-              <div key={index} className="px-2 md:px-4 courseCard">
-                <CourseCard
-                  logo={course.logo}
-                  title={course.title}
-                  subtitle={course.subtitle}
-                  buttonText={course.buttonText}
-                  buttonOnClick={course.buttonOnClick}
-                  backgroundImage={course.backgroundImage}
-                />
+            {Object.keys(groupedCourses).map((grade) => (
+              <div key={grade} className="px-2 md:px-4 courseCard">
+                <h3 className="font-bold text-lg mb-2 text-center">{grade}</h3>
+                {groupedCourses[grade].map((course, index) => (
+                  <div key={index} className="mb-4">
+                    <CourseCard
+                      logo={course.logo}
+                      title={course.title}
+                      subtitle={course.subtitle}
+                      buttonText={course.buttonText}
+                      buttonOnClick={course.buttonOnClick}
+                      backgroundImage={course.backgroundImage}
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </Slider>

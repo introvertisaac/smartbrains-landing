@@ -10,7 +10,7 @@ import Testimonials from "./components/Testimonials";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
-import BackToTop from "./(static)/BacktoTop";
+import BackToTop from "./shared/BacktoTop";
 // import backgroundSvg from "../public/background.svg"; // Import your SVG background file
 
 export default function Home() {

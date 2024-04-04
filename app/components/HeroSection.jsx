@@ -47,8 +47,8 @@ const HeroSection = () => {
 
     return () => {
       clearInterval(timer);
-      lottieInstance.destroy();
-      lottieInstance1.destroy(); // Destroy the Lottie animation instance
+      // lottieInstance.destroy();
+      // lottieInstance1.destroy(); // Destroy the Lottie animation instance
     };
   }, []);
 

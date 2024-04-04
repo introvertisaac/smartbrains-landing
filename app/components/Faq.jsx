@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
-import { questions } from "../utils/Questions";
-import SingleQuestion from "../(static)/SingleQuestion";
+import { questions } from "../constants/Questions";
+import SingleQuestion from "../shared/SingleQuestion";
 
 export default function Faq() {
   const [cards] = useState(questions);

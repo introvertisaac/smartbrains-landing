@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import PerksCard from '../(static)/PerksCard';
+import PerksCard from '../shared/PerksCard';
 import { motion } from 'framer-motion';
 
 const Perks = () => {

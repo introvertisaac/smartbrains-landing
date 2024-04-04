@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import PerksCard from "../(static)/PerksCard";
+import PerksCard from "../shared/PerksCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
