@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black shadow-md text-white relative py-2">
+    <nav className="bg-black shadow-md  relative py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -155,7 +155,7 @@ const Navbar = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div
-          className="fixed inset-y-0 left-0 z-100 w-1/3 h-full bg-[#FFF7E1] overflow-y-auto mobile-menu transition-all duration-300 ${
+          className="fixed inset-y-0 left-0 z-100 w-auto h-full bg-[#FFF7E1] overflow-y-auto mobile-menu transition-all duration-300 ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           }"
         >
@@ -211,7 +211,7 @@ const Navbar = () => {
                 Learn More
               </Button>
             </Link>
-            <div className="mt-4 flex flex-col items-center">
+            <div className="mt-4 flex flex-col items-center text-black">
               <a href="tel:+254793474747" className="mr-4 text-sm font-medium">
                 +254 793 474 747
               </a>
