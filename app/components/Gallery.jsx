@@ -1,51 +1,33 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react"
 
 const GalleryCarousel = () => {
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          centerMode: false,
-          centerPadding: "0",
+          slidesToShow: 1,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          centerMode: false,
-          centerPadding: "0",
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: "50px",
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: "30px",
+          slidesToShow: 3,
         },
       },
     ],
@@ -53,95 +35,105 @@ const GalleryCarousel = () => {
 
   const handleClick = () => {
     // Dispatch the 'openChat' event
-    window.dispatchEvent(new Event('openChat'));
+    window.dispatchEvent(new Event("openChat"));
   };
-  
+
+  const cards = [
+    {
+      url: "/2.jpeg",
+      title: "St. Bhakita School",
+      logo: "/stbhakita.jpeg",
+      id: 1,
+    },
+    {
+      url: "/4.jpeg",
+      title: "St. Bhakita School",
+      logo: "/stbhakita.jpeg",
+      id: 2,
+    },
+    {
+      url: "/4.webp",
+      title: "St. Bhakita School",
+      logo: "/stbhakita.jpeg",
+      id: 3,
+    },
+    {
+      url: "/5.jpg",
+      title: "St. Bhakita School",
+      logo: "/stbhakita.jpeg",
+      id: 4,
+    },
+    {
+      url: "/5.jpg",
+      title: "St. Bhakita School",
+      logo: "/stbhakita.jpeg",
+      id: 5,
+    },
+    {
+      url: "/5.jpg",
+      title: "St. Bhakita School",
+      logo: "/stbhakita.jpeg",
+      id: 6,
+    },
+  ];
+
+  const groupedCards = cards.reduce((acc, card) => {
+    if (!acc[card.id]) {
+      acc[card.id] = [];
+    }
+    acc[card.id].push(card);
+    return acc;
+  }, {});
 
   return (
-    <div className="mt-20 mx-auto max-w-7xl">
-      <div className="flex h-10 items-center justify-center pb-10">
-        <span className="font-bold text-3xl">Gallery</span>
+    <div className="mt-20 mx-auto max-w-7xl px-4 overflow-x-hidden" style={{ height: "520px" }}>
+      <div className="flex justify-center mb-8">
+        <h2 className="text-3xl font-bold">Gallery</h2>
       </div>
-      <div className="overflow-hidden">
-        <Slider {...settings} className="px-4">
-          {cards.map((card) => (
-            <div key={card.id} className="px-2">
-              <div className="relative aspect-video w-[350px] overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/50">
+      <Slider {...settings} ref={sliderRef} className="mb-8">
+        {Object.keys(groupedCards).map((id) => (
+          <div key={id} className="px-4">
+            <div className="relative aspect-video w-[350px] overflow-hidden rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/50">
+              <Image
+                src={groupedCards[id][0].url}
+                alt={groupedCards[id][0].title}
+                fill
+                className="transition-transform duration-300 group-hover:scale-105"
+                style={{ objectFit: "cover" }}
+              />
+              <div className="absolute bottom-0 z-10 flex items-center justify-center p-4">
                 <Image
-                  src={card.url}
-                  alt={card.title}
-                  fill
-                  className="transition-transform duration-300 group-hover:scale-105"
-                  style={{ objectFit: "cover" }}
+                  src={groupedCards[id][0].logo}
+                  alt="logo"
+                  className="h-8 w-8 mr-2"
+                  width={32}
+                  height={32}
                 />
-                <div className="absolute bottom-0 z-10 flex items-center justify-center p-4">
-                  <Image
-                    src={card.logo}
-                    alt="logo"
-                    className="h-8 w-8 mr-2"
-                    width={32}
-                    height={32}
-                  />
-                  <p className="text-sm text-white">{card.title}</p>
-                </div>
+                <p className="text-sm text-white">{groupedCards[id][0].title}</p>
               </div>
             </div>
-          ))}
-        </Slider>
-      </div>
-      <div className="pt-8 md:pt-4 w-full flex justify-center">
+          </div>
+        ))}
+      </Slider>
+      <div className="pt-5">
+        <style jsx global>{`
+          .slick-dots li.slick-active button:before {
+            color: blue;
+            font-size: 15px;
+          }
+          .slick-dots li button:before {
+            color: #f1948a;
+            font-size: 12px;
+          }
+        `}</style>
+        <div className="pt-8 md:pt-4 w-full flex justify-center">
           <Button variant="destructive" size="xxl" onClick={handleClick}>
-            Browse More 
-            {/* <ChevronRight className="ml-20 mr-0 h-6 w-6" /> */}
+            Browse More
           </Button>
         </div>
+      </div>
     </div>
   );
 };
 
 export default GalleryCarousel;
-
-const cards = [
-  {
-    url: "/2.jpeg",
-    title: "St. Bhakita School",
-    logo: "/stbhakita.jpeg",
-    id: 1,
-  },
-  {
-    url: "/4.jpeg",
-    title: "St. Bhakita School",
-    logo: "/stbhakita.jpeg",
-    id: 2,
-  },
-  {
-    url: "/4.webp",
-    title: "St. Bhakita School",
-    logo: "/stbhakita.jpeg",
-    id: 3,
-  },
-  {
-    url: "/5.jpg",
-    title: "St. Bhakita School",
-    logo: "/stbhakita.jpeg",
-    id: 4,
-  },
-  // {
-  //   url: "/5.jpg",
-  //   title: "St. Bhakita School",
-  //   logo: "/kpsa.jpeg",
-  //   id: 5,
-  // },
-  // {
-  //   url: "/coding.jpg",
-  //   title: "St. Bhakita School",
-  //   logo: "/kpsa.jpeg",
-  //   id: 6,
-  // },
-  // {
-  //   url: "/coding.jpg",
-  //   title: "St. Bhakita School",
-  //   logo: "/kpsa.jpeg",
-  //   id: 7,
-  // },
-];
