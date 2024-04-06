@@ -63,7 +63,7 @@ const HeroSection = () => {
       <div className="flex flex-col gap-10 lg:ml-20 text-center lg:text-left w-full lg:w-1/2 pt-10 lg:pt-20">
         <div className="lg:gap-4">
           <h1 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-black">
-            Coding For Kenyan Schools
+            Coding in Kenyan Schools
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-500 font-normal pt-4">
             We empower schools to teach Computer Science 
@@ -112,6 +112,7 @@ const HeroSection = () => {
             Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
           </Button>
         </div>
+        
       </div>
       {/* image on large screens */}
       <div className="hidden lg:flex lg:w-1/2">

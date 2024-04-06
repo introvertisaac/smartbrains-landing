@@ -9,7 +9,7 @@ import { FaYoutube } from "react-icons/fa";
 function Footer() {
   return (
     <div className="relative h-1/3">
-      <div
+      {/* <div
         className="absolute  inset-0 -z-10 w-full  md:h-auto"
         style={{
           backgroundImage: 'url(/footer-bg.svg)',
@@ -17,7 +17,7 @@ function Footer() {
           backgroundSize: 'cover',
            
         }}
-      />
+      /> */}
       <div className=" px-4 py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16">

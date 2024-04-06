@@ -20,8 +20,9 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans">
-      <Navbar />
+      
         <div><Topbar /></div>
+        {/* <Navbar /> */}
         {children}</body>
         <Whatsapp />
         <Footer />

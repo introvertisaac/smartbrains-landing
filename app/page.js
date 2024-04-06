@@ -12,7 +12,6 @@ import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
 import BackToTop from "./shared/BacktoTop";
 
-
 // import 'react-whatsapp-widget/dist/index.css';
 // import backgroundSvg from "../public/background.svg"; // Import your SVG background file
 
@@ -20,14 +19,14 @@ export default function Home() {
   return (
     <div className="relative">
       <div
-  className="absolute inset-0 -z-10 w-full"
-  style={{
-    backgroundImage: 'url(/page-bg.svg)',
-    backgroundRepeat: "repeat-y",
-    backgroundSize: "100% auto",
-    opacity: 0.5,
-  }}
-/>
+        className="absolute inset-0 -z-10 w-full"
+        style={{
+          backgroundImage: "url(/page-bg.svg)",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "100% auto",
+          opacity: 0.5,
+        }}
+      />
       <div className="relative z-10">
         {/* <Topbar /> */}
         <HeroSection />
@@ -51,10 +50,9 @@ export default function Home() {
         <Testimonials />
         <Faq />
         {/* <Footer /> */}
-        
+
         {/* <TawkChat /> */}
         <BackToTop />
-        
       </div>
     </div>
   );

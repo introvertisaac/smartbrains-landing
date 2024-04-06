@@ -1,10 +1,10 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { FaBars, FaTimes, FaEllipsisV } from 'react-icons/fa';
-import { Button } from '@/components/ui/button';
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { FaBars, FaTimes, FaEllipsisV } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 import { RxDividerVertical } from "react-icons/rx";
-import { ChevronRight } from "lucide-react"
+import { ChevronRight } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,21 +15,21 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (isOpen && !event.target.closest('.mobile-menu')) {
+      if (isOpen && !event.target.closest(".mobile-menu")) {
         setIsOpen(false);
       }
     };
 
-    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener("click", handleOutsideClick);
 
     return () => {
-      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, [isOpen]);
 
   const handleClick = () => {
     // Dispatch the 'openChat' event
-    window.dispatchEvent(new Event('openChat'));
+    window.dispatchEvent(new Event("openChat"));
   };
 
   return (
@@ -41,6 +41,91 @@ const Navbar = () => {
             <Link href="/">
               <img className="h-12 w-auto" src="/logo.png" alt="Logo" />
             </Link>
+          </div>
+
+          {/* Desktop Contact Info */}
+          <div className="hidden md:block">
+            <div className="flex ">
+              <div className="flex flex-col items-start">
+                <a
+                  href="tel:+254793474747"
+                  className="mr-4 text-sm font-medium"
+                >
+                  +254 793 474 747
+                </a>
+                <a
+                  href="mailto:adm@smartbrainskenya.com"
+                  className="text-sm font-medium"
+                >
+                  adm@smartbrainskenya.com
+                </a>
+              </div>
+              <RxDividerVertical
+              size={30}
+              className="mx-4 size-10 text-gray-400"
+            />
+            </div>
+            
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className=" flex justify-between items-center">
+              <Link
+                href="/courses"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white"
+              >
+                <Button variant="link" text="white">
+                  Courses
+                </Button>
+              </Link>
+              <Link
+                href="/about"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white"
+              >
+                <Button variant="link" text="white">
+                  About Us
+                </Button>
+              </Link>
+              <Link
+                href="/contact"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white "
+              >
+                <Button variant="link" text="white">
+                  contact
+                </Button>
+              </Link>
+              <RxDividerVertical
+                size={30}
+                className="mx-4 size-10 text-gray-400"
+              />
+              <div className="flex justify-between gap-2">
+                <Link
+                  href="https://sbs-tutor.web.app/auth"
+                  className="block rounded-md text-base font-medium text-black"
+                >
+                  <Button variant="destructive" size="sm" className="w-full">
+                    Join Us <ChevronRight />
+                  </Button>
+                </Link>
+                <Link
+                  href="https://sbs-tutor.web.app/auth"
+                  className="block rounded-md text-base font-medium text-white"
+                >
+                  <Button variant="ghost" size="sm" className="w-full">
+                    Tutors Dash
+                  </Button>
+                </Link>
+                <Link
+                  href="https://smartbrains-ke.web.app/auth"
+                  className="block rounded-md text-base font-medium text-white"
+                >
+                  <Button variant="outline" size="sm" className="w-full">
+                    Join Class
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Hamburger Menu / Close Icon */}
@@ -59,48 +144,21 @@ const Navbar = () => {
               )}
             </button>
           </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center md:ml-6">
-              <Link onClick={handleClick} href="" className="px-3 py-2 rounded-md text-sm font-medium">
-                <Button variant="destructive" size="lg">
-                  Join Us  <ChevronRight  className="ml-20 mr-0 h-6 w-6" />
-                </Button>
-              </Link>
-              <RxDividerVertical size={30} className="mx-4 size-10 text-gray-400" />
-              <Link
-                
-                href="https://smartbrains-ke.web.app/auth"
-                className="px-3 py-2 rounded-md text-sm font-medium"
-              >
-                <Button variant="ghost" size="lg">
-                Join Class
-                </Button>
-              </Link>
-              <Link
-                href="https://sbs-tutor.web.app/auth"
-                className="px-3 py-2 rounded-md text-sm font-medium"
-              >
-                <Button variant="outline" size="lg">
-                   Tutors Dash
-                </Button>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       <div
         className={`md:hidden fixed inset-0 z-50 transition-opacity duration-300 ${
-          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="fixed inset-y-0 left-0 z-100 w-1/3 h-full bg-[#FFF7E1] overflow-y-auto mobile-menu transition-all duration-300 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }">
+        <div
+          className="fixed inset-y-0 left-0 z-100 w-1/3 h-full bg-[#FFF7E1] overflow-y-auto mobile-menu transition-all duration-300 ${
+            isOpen ? 'translate-x-0' : '-translate-x-full'
+          }"
+        >
           {/* Logo */}
           <div className="flex justify-center py-4">
             <Link href="/">
@@ -108,21 +166,62 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="px-4 pt-2 pb-6 space-y-4">
-            <Link onClick={handleClick} href="#" className="block rounded-md text-base font-medium text-black">
+            <Link
+              href="/courses"
+              className="block rounded-md text-base font-medium text-black"
+            >
+              Courses
+            </Link>
+            <Link
+              href="/about"
+              className="block rounded-md text-base font-medium text-black"
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="block rounded-md text-base font-medium text-black"
+            >
+              Contact
+            </Link>
+            <Link
+              onClick={handleClick}
+              href="#"
+              className="block rounded-md text-base font-medium text-black"
+            >
               <Button variant="destructive" size="lg" className="w-full">
                 Join Us
               </Button>
             </Link>
-            <Link href="https://smartbrains-ke.web.app/auth" className="block rounded-md text-base font-medium text-black">
+            <Link
+              onClick={handleClick}
+              href="#"
+              className="block rounded-md text-base font-medium text-black"
+            >
               <Button variant="destructive" size="lg" className="w-full">
-              Join Class 
+                Contact Us
               </Button>
             </Link>
-            <Link href="https://sbs-tutor.web.app/auth" className="block rounded-md text-base font-medium text-black">
+            <Link
+              onClick={handleClick}
+              href="#"
+              className="block rounded-md text-base font-medium text-black"
+            >
               <Button variant="destructive" size="lg" className="w-full">
-              Tutors Dash 
+                Learn More
               </Button>
             </Link>
+            <div className="mt-4 flex flex-col items-center">
+              <a href="tel:+254793474747" className="mr-4 text-sm font-medium">
+                +254 793 474 747
+              </a>
+              <a
+                href="mailto:adm@smartbrainskenya.com"
+                className="text-sm font-medium"
+              >
+                adm@smartbrainskenya.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
