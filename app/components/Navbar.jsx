@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6 overflow-x-auto scrollbar-hide">
           <Link href="/courses" className="text-gray-600 hover:text-gray-800 text-sm md:text-base whitespace-nowrap">
             Courses
-          </Link>s
+          </Link>
           <Link href="/about" className="text-gray-600 hover:text-gray-800 text-sm md:text-base whitespace-nowrap">
             About Us
           </Link>
