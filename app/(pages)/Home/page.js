@@ -11,9 +11,6 @@ import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import TawkChat from "./components/TawkChat";
 import BackToTop from "./shared/BacktoTop";
-
-
-// import 'react-whatsapp-widget/dist/index.css';
 // import backgroundSvg from "../public/background.svg"; // Import your SVG background file
 
 export default function Home() {
@@ -50,11 +47,9 @@ export default function Home() {
         {/* <Directors /> */}
         <Testimonials />
         <Faq />
-        {/* <Footer /> */}
-        
-        {/* <TawkChat /> */}
+        <Footer />
         <BackToTop />
-        
+        <TawkChat />
       </div>
     </div>
   );

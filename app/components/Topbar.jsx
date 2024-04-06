@@ -71,7 +71,7 @@ const Navbar = () => {
               <RxDividerVertical size={30} className="mx-4 size-10 text-gray-400" />
               <Link
                 
-                href="https://sbs-tutor.web.app/auth"
+                href="https://smartbrains-ke.web.app/auth"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Button variant="ghost" size="lg">
@@ -79,7 +79,7 @@ const Navbar = () => {
                 </Button>
               </Link>
               <Link
-                href="https://smartbrains-ke.web.app/auth"
+                href="https://sbs-tutor.web.app/auth"
                 className="px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Button variant="outline" size="lg">
@@ -113,12 +113,12 @@ const Navbar = () => {
                 Join Us
               </Button>
             </Link>
-            <Link href="https://sbs-tutor.web.app/auth" className="block rounded-md text-base font-medium text-black">
+            <Link href="https://smartbrains-ke.web.app/auth" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
               Join Class 
               </Button>
             </Link>
-            <Link href="https://smartbrains-ke.web.app/auth" className="block rounded-md text-base font-medium text-black">
+            <Link href="https://sbs-tutor.web.app/auth" className="block rounded-md text-base font-medium text-black">
               <Button variant="destructive" size="lg" className="w-full">
               Tutors Dash 
               </Button>
