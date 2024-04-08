@@ -52,19 +52,23 @@ const ServicesSection = () => {
   };
 
   const services = [
-    { icon: FaUserEdit, title: 'Branding', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: FaCode, title: 'UI/UX', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: FaPencilAlt, title: 'Product Design', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: FaChartLine, title: 'Analytics', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: FaRobot, title: 'Automation', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { icon: FaUserClock, title: 'Consulting', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-  ];
+    { icon: FaUserEdit, title: 'Student-Centric Curriculum', description: 'Empower your child with a curriculum that adapts to their pace of learning and interests, fostering a passion for coding.' },
+    { icon: FaCode, title: 'Expert Educators', description: 'Our team of highly-trained teachers is dedicated to nurturing coding skills in children, providing personalized guidance every step of the way.' },
+    { icon: FaPencilAlt, title: 'Laptop Provision', description: 'Ensure children have the tools they need to succeed with our provision of laptops, facilitating seamless learning both in and out of the classroom.' },
+    { icon: FaChartLine, title: 'Collaborative Framework', description: 'Foster teamwork and creativity in children through our collaboration framework, where kids work together to solve challenges and build innovative projects.' },
+    { icon: FaRobot, title: 'Hands-On Projects', description: 'Encourage practical learning with our emphasis on hands-on projects, allowing children to apply coding skills to real-world scenarios.' },
+    { icon: FaUserClock, title: 'Progress Tracking', description: 'Stay informed about the coding journey of your child with our progress tracking system, providing insights into their development and achievements.' },
+];
+
+
+
+
 
   return (
-    <section className="bg-white py-20 md:py-2">
+    <section className="bg-white py-20 md:py-10">
       <div className="px-8 md:px-16 w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
-          Our Service
+          Why use our Courses?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {services.map((service, index) => (
