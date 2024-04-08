@@ -4,7 +4,7 @@ import Image from 'next/image';
 const InstructorsComponent = () => {
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-8 w-full ">
-        <div className='w-full md:w-3/5'>
+        <div className='w-full md:w-3/4'>
       <h2 className="text-3xl font-bold mb-8 text-center">Our Instructors</h2>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-8 md:mb-0">
@@ -21,22 +21,22 @@ const InstructorsComponent = () => {
         <div className="md:w-1/2 flex flex-wrap justify-center">
           <div className="w-full md:w-1/2 lg:w-1/2 p-4">
             <div className="bg-pink-100 shadow-lg rounded-lg p-6 h-40">
-              <h2 className="text-2xl font-bold mb-4">300+</h2>
+              <h2 className="text-2xl font-bold mb-4">80+</h2>
               <p className="text-gray-600">
-                graduate IT Instructors <br /> from India
+                trained IT Instructors <br /> from Different Fields
               </p>
             </div>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/2 p-4">
             <div className="bg-pink-100 shadow-lg rounded-lg p-6 h-40">
-              <h2 className="text-2xl font-bold mb-4">7+</h2>
-              <p className="text-gray-600">Years coding experience</p>
+              <h2 className="text-2xl font-bold mb-4">10+</h2>
+              <p className="text-gray-600">Years tutoring experience</p>
             </div>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/2 p-4">
             <div className="bg-pink-100 shadow-lg rounded-lg p-6 h-40">
-              <h2 className="text-2xl font-bold mb-4">91%</h2>
-              <p className="text-gray-600">Female teachers</p>
+              <h2 className="text-2xl font-bold mb-4">100%</h2>
+              <p className="text-gray-600">Revised and Modern Curriculum</p>
             </div>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/2 p-4">

@@ -8,7 +8,7 @@ import { FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="relative h-1/3">
+    <div className="bg-gradient-to-r from-blue-200 to-cyan-200 relative h-1/3">
       {/* <div
         className="absolute  inset-0 -z-10 w-full  md:h-auto"
         style={{

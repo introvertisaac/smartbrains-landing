@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = ({ hero }) => {
   return (
-    <div className="bg-gradient-to-r from-amber-200 to-slate-100 py-12 px-4 sm:px-6 md:px-12 relative">
+    <div className="bg-gradient-to-r from-teal-200 to-teal-500 py-12 px-4 sm:px-6 md:px-12 relative">
       {/* Mobile View */}
       <div className="block md:hidden">
         <div className="rounded-lg overflow-hidden">
@@ -68,14 +68,14 @@ const HeroSection = ({ hero }) => {
           <div className="grid grid-cols-4 gap-4 mb-6">
             {hero.features.map((feature, index) => (
               <div key={index}>
-                <h3 className="text-lg font-semibold">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-md font-semibold">{feature.title}</h3>
+                <p className="text-sm text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
           <div className='pt-[8%]'><p className="text-gray-600 mb-4">{hero.extraDescription}</p></div>
         </div>
-        <div className="w-1/4 rounded-lg shadow-lg overflow-hidden h-auto z-20 absolute right-20 bg-white">
+        <div className="w-1/5 rounded-lg shadow-lg overflow-hidden h-auto z-20 absolute right-20 bg-white">
           <div className="rounded-lg overflow-hidden">
             <Image
               src={hero.image.src}
