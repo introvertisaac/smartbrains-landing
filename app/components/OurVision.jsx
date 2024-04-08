@@ -22,7 +22,7 @@ const OurVision = () => {
         <div className="md:w-2/3 bg-white text-black p-8 md:p-12 flex flex-col justify-center">
           <h2 className="text-3xl font-bold mb-4">From sketch to real life</h2>
           <p className="text-lg mb-8">
-            We create spaces that people want to be in. Since 2001 we have helped our clients and customers turn ideas and aspirations into reality. The basic philosophy of Lofticus is to create individual, questionally stunning design solutions for our customers by employing unique styles and architecture. Even if you don't have a really clear idea of what you want, we will help you to get the result you dreamed of.
+            We create spaces that people want to be in. Since 2001 we have helped our clients and customers turn ideas and aspirations into reality. The basic philosophy of Lofticus is to create individual, questionally stunning design solutions for our customers by employing unique styles and architecture. Even if you don&apos;t have a really clear idea of what you want, we will help you to get the result you dreamed of.
           </p>
           <p className="text-lg">
             We feel that interior design is one of the most important investments you will ever make. Whether your needs are residential or commercial interior design, we are always there for a complete commitment to your project, so we can create a place you are comfortable to be in.
