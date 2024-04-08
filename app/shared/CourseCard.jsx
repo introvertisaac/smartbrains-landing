@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
-const CourseCard = ({ logo, title, subtitle, buttonText, buttonOnClick, backgroundImage }) => {
+const CourseCard = ({ logo, title, subtitle, buttonText, buttonRoute, backgroundImage }) => {
   return (
     <div
       className="flex flex-col items-center justify-between rounded-lg shadow-lg mx-auto py-4 px-6 md:py-8 md:px-10 relative"
@@ -21,7 +22,11 @@ const CourseCard = ({ logo, title, subtitle, buttonText, buttonOnClick, backgrou
       <div className="flex flex-col items-center justify-center relative z-10">
         <h2 className="text-xl font-bold mb-2 text-center">{title}</h2>
         <h3 className="text-lg font-semibold mb-4 text-center">{subtitle}</h3>
-        <Button variant="coursesbtngreen" size="thin" onClick={buttonOnClick}>{buttonText}</Button>
+        <Link href={buttonRoute} passHref>
+          <Button variant="coursesbtngreen" size="thin">
+            {buttonText}
+          </Button>
+        </Link>
       </div>
     </div>
   );
