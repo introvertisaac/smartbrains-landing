@@ -18,7 +18,7 @@ const SkillsSectionComponent = ({ title, description, skills, imageSource }) => 
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">{title}</h2>
           <p className="text-gray-600 mb-8">{description}</p>
-          <h3 className="text-xl font-bold mb-4">Skills you'll gain</h3>
+          <h3 className="text-xl font-bold mb-4">Skills you&apos;ll gain</h3>
           <ul className="list-disc pl-6 space-y-2">
             {skills.map((skill, index) => (
               <li key={index} className="flex items-center">

@@ -61,7 +61,7 @@ const GetStartedComponent = () => {
           <div className="p-8">
             <div className="text-gray-600 text-lg mb-4">
               <FaQuoteLeft className="text-red-500 inline-block mr-2" />
-              My teacher at SmartBrains was the best guide I could've asked for as they really customized the classes to match my learning style.
+              My teacher at SmartBrains was the best guide I My teacher at SmartBrains was the best guide I could&apos;ve asked for as they really customized the classes to match my learning style. asked for as they really customized the classes to match my learning style.
             </div>
           </div>
           <div className="bg-gray-100 px-8 py-4 rounded-b-lg flex items-center">
@@ -82,21 +82,21 @@ const GetStartedComponent = () => {
               <MdLocationOn className="text-red-500 mt-1 mr-4" />
               <div>
                 <p className="font-medium">Location</p>
-                <p className="text-gray-600">336 Whitwell Ave, Jersey City, NJ 07305</p>
+                <p className="text-gray-600">Cooperative Bank Building - Buruburu | Nairobi, Kenya</p>
               </div>
             </div>
             <div className="flex items-start">
               <MdPhone className="text-red-500 mt-1 mr-4" />
               <div>
                 <p className="font-medium">Phone</p>
-                <p className="text-gray-600">(201) 736-860-88</p>
+                <p className="text-gray-600">+254 793 474 747</p>
               </div>
             </div>
             <div className="flex items-start">
               <MdEmail className="text-red-500 mt-1 mr-4" />
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-gray-600">james@calvin.com</p>
+                <p className="text-gray-600">adm@smartbrainskenya.com</p>
               </div>
             </div>
           </div>

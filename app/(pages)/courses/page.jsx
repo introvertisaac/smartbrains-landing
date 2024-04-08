@@ -19,7 +19,7 @@ const HeroSection = () => {
             I am here ready to help you in making creative digital products
           </p>
           <button className="bg-pink-500 text-white px-6 py-3 rounded-md hover:bg-pink-600 transition-colors duration-300">
-            Let's Discuss
+            Let&apos;s Discuss
           </button>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 w-full px-4 md:px-8">
