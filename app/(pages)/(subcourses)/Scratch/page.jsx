@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/scratch_image.jpeg',
+      src: '/sub-pages/scratch.jpg',
       alt: 'Scratch Programming Hero Image',
     },
     title: 'Let Your Creativity Soar with Scratch!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Enhance creativity by designing and sharing interactive stories, games, and animations',
       'Join a supportive community of young creators and receive feedback on your projects',
     ],
-    imageSource: '/scratch_image.jpeg',
+    imageSource: '/sub-pages/scratch.png',
   };
   
   

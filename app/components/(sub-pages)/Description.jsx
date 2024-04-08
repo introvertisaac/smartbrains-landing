@@ -10,7 +10,7 @@ const InstructorsComponent = () => {
         <div className="md:w-1/2 mb-8 md:mb-0">
           <div className="flex justify-center">
             <Image
-              src="/css.jpeg"
+              src="/sub-pages/hands.png"
               alt="Instructors"
               width={400}
               height={300}

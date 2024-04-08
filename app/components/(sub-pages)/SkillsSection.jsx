@@ -10,8 +10,8 @@ const SkillsSectionComponent = ({ title, description, skills, imageSource }) => 
           <Image
             src={imageSource}
             alt={title}
-            width={400}
-            height={300}
+            width={600}
+            height={600}
             className="rounded-lg object-cover"
           />
         </div>

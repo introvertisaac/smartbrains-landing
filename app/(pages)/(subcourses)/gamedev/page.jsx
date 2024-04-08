@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/game_dev_image.jpeg',
+      src: '/sub-pages/gamedev.jpg',
       alt: 'Game Development Hero Image',
     },
     title: 'Embark on an Adventure with Game Development!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Enhance creativity by building unique and engaging games',
       'Gain confidence in game development and coding to pursue future projects',
     ],
-    imageSource: '/game_dev_image.jpeg',
+    imageSource: '/sub-pages/gamedev.png',
   };
   
   

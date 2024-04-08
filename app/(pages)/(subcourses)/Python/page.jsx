@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/python_image.jpeg',
+      src: '/sub-pages/python.jpg',
       alt: 'Python Hero Image',
     },
     title: 'Discover the Fun of Python Programming!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Enhance creativity by building programs and games with Python',
       'Gain confidence in using Python to tackle real-world problems and projects',
     ],
-    imageSource: '/python_image.jpeg',
+    imageSource: '/sub-pages/python.jpg',
   };
   
   

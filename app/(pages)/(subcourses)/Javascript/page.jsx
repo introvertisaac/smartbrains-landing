@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/javascript_image.jpeg',
+      src: '/js.jpeg',
       alt: 'JavaScript Hero Image',
     },
     title: 'Unlock the Magic of JavaScript!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Enhance creativity by building interactive web applications and games',
       'Gain confidence in using JavaScript to bring their ideas to life',
     ],
-    imageSource: '/javascript_image.jpeg',
+    imageSource: '/sub-pages/javascript.jpg',
   };
   
   

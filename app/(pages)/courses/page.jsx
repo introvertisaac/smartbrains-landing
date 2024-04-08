@@ -3,6 +3,7 @@ import { FaHandPointRight, FaCode, FaPencilAlt, FaUserEdit, FaChartLine, FaRobot
 import Image from 'next/image';
 import { useState } from 'react';
 import Courses from '@/app/components/Courses';
+import Faq from '@/app/components/Faq';
 
 const HeroSection = () => {
   return (
@@ -13,7 +14,7 @@ const HeroSection = () => {
            Hi There
           </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-            LUXE is here to be your assistance
+            Here to Teach & Nurture for the digital Landscape
           </h1>
           <p className="text-gray-600 leading-relaxed">
             I am here ready to help you in making creative digital products
@@ -22,13 +23,13 @@ const HeroSection = () => {
             Let&apos;s Discuss
           </button>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0 w-full px-4 md:px-8">
+        <div className="md:w-1/2 mt-8 md:mt-0 border-0 w-full px-4 md:px-8">
           <Image
-            src="/css1.jpeg"
-            alt="Product Designer"
+            src="/kids.png"
+            alt="Progammer"
             width={300}
             height={250}
-            className="w-full rounded-lg shadow-lg"
+            className="w-full "
           />
         </div>
       </div>
@@ -113,6 +114,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <Courses />
+      <Faq />
     </div>
   );
 }

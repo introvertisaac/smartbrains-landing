@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/robotics_image.jpeg',
+      src: '/robotics.jpg',
       alt: 'Robotics Hero Image',
     },
     title: 'Explore the World of Robotics!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Enhance problem-solving skills through hands-on robotics challenges and projects',
       'Gain confidence in using robotics technology to tackle real-world problems and innovate for the future',
     ],
-    imageSource: '/robotics_image.jpeg',
+    imageSource: '/sub-pages/robotics.png',
   };
   
   

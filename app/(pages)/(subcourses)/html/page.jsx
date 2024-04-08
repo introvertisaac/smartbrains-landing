@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/html.png',
+      src: '/html-hero.png',
       alt: 'HTML Hero Image',
     },
     title: 'Discover the World of HTML!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Enhance creativity by designing and building their own websites',
       'Gain confidence in using HTML to express ideas and create digital content',
     ],
-    imageSource: '/html.png',
+    imageSource: '/guy-walkin.gif',
   };
   
   

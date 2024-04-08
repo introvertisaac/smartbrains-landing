@@ -5,7 +5,7 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/web_dev_image.jpeg',
+      src: '/sub-pages/webdev1.jpg',
       alt: 'Web Development Hero Image',
     },
     title: 'Embark on a Journey into Web Development!',
@@ -45,7 +45,7 @@ const HomePage = () => {
       'Develop problem-solving skills through hands-on coding projects',
       'Gain confidence in web development to pursue future projects and interests',
     ],
-    imageSource: '/web_dev_image.jpeg',
+    imageSource: '/sub-pages/webdev.jpg',
   };
   
   
