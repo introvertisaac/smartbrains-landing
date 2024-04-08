@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { MdPhoneAndroid } from 'react-icons/md';
 import { IoIosArrowDown } from 'react-icons/io';

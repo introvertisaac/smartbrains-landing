@@ -1,3 +1,4 @@
+"use client"
 import InstructorsComponent from '@/app/components/(sub-pages)/Description'
 import MissionComponent from '@/app/components/MissionComponent'
 import OurVision from '@/app/components/OurVision'
