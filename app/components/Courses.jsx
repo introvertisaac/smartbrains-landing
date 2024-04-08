@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef } from 'react';
 import CourseCard from '../shared/CourseCard';
 import { Button } from '@/components/ui/button';
