@@ -35,7 +35,7 @@ const Courses = () => {
     { logo: '/android1.jpeg', title: 'Android Development', subtitle: 'Build mobile apps', buttonText: 'Read More', buttonRoute: '/apps', backgroundImage: '/card-gradient.svg', grade: 'Grade 4,5,6' },
     { logo: '/robotics.jpeg', title: 'Robotics', subtitle: 'Design and build robots', buttonText: 'Read More', buttonRoute: '/Robotics', backgroundImage: '/card-gradient1.svg', grade: 'Grade 7,8,9' },
     { logo: '/webdev.png', title: 'Web Development', subtitle: 'Learn web development basics', buttonText: 'Read More', buttonRoute: '/webdev', backgroundImage: '/card-gradient.svg', grade: 'Grade 10,11,12' },
-    { logo: '/scratch.jpg', title: 'Scratch Programming', subtitle: 'Introduction to programming with Scratch', buttonText: 'Read More', buttonRoute: '/Scratch', backgroundImage: '/card-gradient1.svg', grade: 'Grade 3,4,5' },
+    { logo: '/scratch.png', title: 'Scratch Programming', subtitle: 'Introduction to programming with Scratch', buttonText: 'Read More', buttonRoute: '/Scratch', backgroundImage: '/card-gradient1.svg', grade: 'Grade 3,4,5' },
     { logo: '/python.png', title: 'Python for Kids', subtitle: 'Introduction to Python programming', buttonText: 'Read More', buttonRoute: '/Python', backgroundImage: '/card-gradient.svg', grade: 'Grade 6,7,8' },
     { logo: '/javascript.png', title: 'JavaScript', subtitle: 'Learn JavaScript programming', buttonText: 'Read More', buttonRoute: '/Javascript', backgroundImage: '/card-gradient1.svg', grade: 'Grade 9,10,11' },
     { logo: '/gamedev.jpg', title: 'Game Development', subtitle: 'Create games with game development tools', buttonText: 'Read More', buttonRoute: '/gamedev', backgroundImage: '/card-gradient.svg', grade: 'Grade 12' },

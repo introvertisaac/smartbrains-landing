@@ -5,34 +5,55 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/android1.jpeg',
-      alt: 'App Development Hero Image',
+    src: '/android1.jpeg',
+    alt: 'App Development Hero Image',
     },
     title: 'Get Creative with App Development!',
-    description: 'Welcome to our app development course for kids! Have you ever dreamed of creating your own mobile apps and bringing your ideas to life? With our app development course, you can turn those dreams into reality. Get ready to unleash your creativity and build amazing apps that you can share with the world!',
+    description:
+    'Welcome to our app development course for kids! Have you ever dreamed of creating your own mobile apps and bringing your ideas to life? With our app development course, you can turn those dreams into reality. Get ready to unleash your creativity and build amazing apps that you can share with the world!',
     features: [
-      { title: 'Interactive Learning', description: 'Engaging and interactive lessons designed specifically for kids to learn app development with ease.' },
-      { title: 'Hands-on Projects', description: 'Practice what you learn by building real-world apps and games that showcase your creativity.' },
-      { title: 'Expert Guidance', description: 'Receive personalized guidance from experienced instructors who will mentor you every step of the way.' },
-      { title: 'Creative Freedom', description: 'Explore your imagination and bring your ideas to life through coding and app development.' },
+    {
+    title: 'Interactive Learning',
+    description:
+    'Engaging and interactive lessons designed specifically for kids to learn app development with ease.',
+    },
+    {
+    title: 'Hands-on Projects',
+    description:
+    'Practice what you learn by building real-world apps and games that showcase your creativity.',
+    },
+    {
+    title: 'Expert Guidance',
+    description:
+    'Receive personalized guidance from experienced instructors who will mentor you every step of the way.',
+    },
+    {
+    title: 'Creative Freedom',
+    description:
+    'Explore your imagination and bring your ideas to life through coding and app development.',
+    },
     ],
-    extraDescription: 'Join us on this exciting journey to unlock the power of app development and unleash your potential as a future app developer!',
+    extraDescription:
+    'Join us on this exciting journey to unlock the power of app development and unleash your potential as a future app developer!',
     ctaButton: {
-      label: 'Get Started',
+    label: 'Get Started',
     },
     downloadButton: {
-      label: 'Download Curriculum',
+    label: 'Download Curriculum',
     },
     rating: '4.9/5',
     contentTitle: 'What You Will Learn:',
     contentList: [
-      'Fundamentals of app development and programming concepts',
-      'Creating interactive user interfaces for mobile apps',
-      'Implementing functionality and features using coding languages like JavaScript',
-      'Testing and debugging your apps to ensure they work smoothly',
-      'Publishing your apps to app stores and sharing them with others',
+    'Fundamentals of app development and programming concepts',
+    'Creating interactive user interfaces for mobile apps',
+    'Implementing functionality and features using coding languages like JavaScript',
+    'Testing and debugging your apps to ensure they work smoothly',
+    'Publishing your apps to app stores and sharing them with others',
     ],
-  };
+    backgroundImage: {
+    src: '/page-bg.svg',
+    },
+    };
 
   const courseData = {
     title: 'App Development for Kids',

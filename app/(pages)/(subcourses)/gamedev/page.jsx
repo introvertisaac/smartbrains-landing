@@ -9,14 +9,32 @@ const HomePage = () => {
       alt: 'Game Development Hero Image',
     },
     title: 'Embark on an Adventure with Game Development!',
-    description: 'Welcome to our game development course for kids! Are you ready to create your own exciting and interactive games? With our game development course, you can turn your imagination into reality and build amazing games that you can play and share with your friends and family. Get ready for an adventure like no other!',
+    description:
+      'Welcome to our game development course for kids! Are you ready to create your own exciting and interactive games? With our game development course, you can turn your imagination into reality and build amazing games that you can play and share with your friends and family. Get ready for an adventure like no other!',
     features: [
-      { title: 'Engaging Lessons', description: 'Interactive lessons designed specifically for kids to learn game development in a fun and exciting way.' },
-      { title: 'Hands-on Projects', description: 'Practice what you learn by creating your own games, from simple puzzles to action-packed adventures.' },
-      { title: 'Expert Guidance', description: 'Receive personalized guidance from experienced instructors who will mentor you every step of the way.' },
-      { title: 'Creative Freedom', description: 'Let your imagination run wild as you design characters, worlds, and gameplay mechanics for your games.' },
+      {
+        title: 'Engaging Lessons',
+        description:
+          'Interactive lessons designed specifically for kids to learn game development in a fun and exciting way.',
+      },
+      {
+        title: 'Hands-on Projects',
+        description:
+          'Practice what you learn by creating your own games, from simple puzzles to action-packed adventures.',
+      },
+      {
+        title: 'Expert Guidance',
+        description:
+          'Receive personalized guidance from experienced instructors who will mentor you every step of the way.',
+      },
+      {
+        title: 'Creative Freedom',
+        description:
+          'Let your imagination run wild as you design characters, worlds, and gameplay mechanics for your games.',
+      },
     ],
-    extraDescription: 'Join us on this thrilling journey to unlock the power of game development and unleash your potential as a future game designer!',
+    extraDescription:
+      'Join us on this thrilling journey to unlock the power of game development and unleash your potential as a future game designer!',
     ctaButton: {
       label: 'Get Started',
     },
@@ -32,6 +50,9 @@ const HomePage = () => {
       'Testing and debugging your games to ensure they work smoothly',
       'Publishing your games and sharing them with others',
     ],
+    backgroundImage: {
+      src: '/page-bg.svg',
+    },
   };
 
   const courseData = {

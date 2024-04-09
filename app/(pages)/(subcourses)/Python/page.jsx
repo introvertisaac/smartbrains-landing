@@ -9,14 +9,32 @@ const HomePage = () => {
       alt: 'Python Hero Image',
     },
     title: 'Discover the Fun of Python Programming!',
-    description: 'Welcome to our Python coding course for kids! Python is a powerful and versatile programming language used by developers around the world. With Python, you can create games, build websites, analyze data, and much more. Get ready to embark on an exciting journey into the world of coding!',
+    description:
+      'Welcome to our Python coding course for kids! Python is a powerful and versatile programming language used by developers around the world. With Python, you can create games, build websites, analyze data, and much more. Get ready to embark on an exciting journey into the world of coding!',
     features: [
-      { title: 'Interactive Learning', description: 'Engaging and interactive lessons designed specifically for kids to learn Python programming with ease.' },
-      { title: 'Hands-on Projects', description: 'Practice what you learn with fun projects that allow you to create your own programs and games.' },
-      { title: 'Expert Guidance', description: 'Receive personalized guidance from experienced instructors who will mentor you every step of the way.' },
-      { title: 'Creative Freedom', description: 'Explore your creativity and build anything you can imagine with the power of Python.' },
+      {
+        title: 'Interactive Learning',
+        description:
+          'Engaging and interactive lessons designed specifically for kids to learn Python programming with ease.',
+      },
+      {
+        title: 'Hands-on Projects',
+        description:
+          'Practice what you learn with fun projects that allow you to create your own programs and games.',
+      },
+      {
+        title: 'Expert Guidance',
+        description:
+          'Receive personalized guidance from experienced instructors who will mentor you every step of the way.',
+      },
+      {
+        title: 'Creative Freedom',
+        description:
+          'Explore your creativity and build anything you can imagine with the power of Python.',
+      },
     ],
-    extraDescription: 'Join us on this exciting journey to discover the fun of Python programming and unleash your potential as a future coder!',
+    extraDescription:
+      'Join us on this exciting journey to discover the fun of Python programming and unleash your potential as a future coder!',
     ctaButton: {
       label: 'Get Started',
     },
@@ -32,6 +50,9 @@ const HomePage = () => {
       'Building basic programs and games',
       'Introduction to data analysis and visualization',
     ],
+    backgroundImage: {
+      src: '/page-bg.svg',
+    },
   };
 
   const courseData = {

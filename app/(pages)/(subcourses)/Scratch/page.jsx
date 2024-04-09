@@ -9,14 +9,32 @@ const HomePage = () => {
       alt: 'Scratch Programming Hero Image',
     },
     title: 'Let Your Creativity Soar with Scratch!',
-    description: 'Welcome to our Scratch programming course for kids! Scratch is a beginner-friendly programming language that allows you to create interactive stories, games, and animations. With Scratch, you can express your creativity and learn fundamental coding concepts in a fun and engaging way. Get ready to unleash your imagination!',
+    description:
+      'Welcome to our Scratch programming course for kids! Scratch is a beginner-friendly programming language that allows you to create interactive stories, games, and animations. With Scratch, you can express your creativity and learn fundamental coding concepts in a fun and engaging way. Get ready to unleash your imagination!',
     features: [
-      { title: 'Interactive Learning', description: 'Engaging and interactive lessons designed specifically for kids to learn Scratch programming with ease.' },
-      { title: 'Hands-on Projects', description: 'Practice what you learn by creating your own interactive stories, games, and animations using Scratch blocks.' },
-      { title: 'Creative Exploration', description: 'Explore your creativity and problem-solving skills as you design and share your projects with the Scratch community.' },
-      { title: 'Safe and Supportive Environment', description: 'Join a supportive community of young creators and receive feedback and encouragement on your projects.' },
+      {
+        title: 'Interactive Learning',
+        description:
+          'Engaging and interactive lessons designed specifically for kids to learn Scratch programming with ease.',
+      },
+      {
+        title: 'Hands-on Projects',
+        description:
+          'Practice what you learn by creating your own interactive stories, games, and animations using Scratch blocks.',
+      },
+      {
+        title: 'Creative Exploration',
+        description:
+          'Explore your creativity and problem-solving skills as you design and share your projects with the Scratch community.',
+      },
+      {
+        title: 'Safe and Supportive Environment',
+        description:
+          'Join a supportive community of young creators and receive feedback and encouragement on your projects.',
+      },
     ],
-    extraDescription: 'Join us on this exciting journey to discover the magic of coding with Scratch and unleash your potential as a future programmer!',
+    extraDescription:
+      'Join us on this exciting journey to discover the magic of coding with Scratch and unleash your potential as a future programmer!',
     ctaButton: {
       label: 'Get Started',
     },
@@ -32,6 +50,9 @@ const HomePage = () => {
       'Building simple games, stories, and simulations',
       'Sharing and remixing projects with the Scratch community',
     ],
+    backgroundImage: {
+      src: '/page-bg.svg',
+    },
   };
 
   const courseData = {

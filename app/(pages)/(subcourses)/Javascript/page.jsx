@@ -5,34 +5,55 @@ import SkillsSectionComponent from "@/app/components/(sub-pages)/SkillsSection";
 const HomePage = () => {
   const hero = {
     image: {
-      src: '/js.jpeg',
-      alt: 'JavaScript Hero Image',
+    src: '/js.jpeg',
+    alt: 'JavaScript Hero Image',
     },
     title: 'Unlock the Magic of JavaScript!',
-    description: 'Welcome to our JavaScript coding course for kids! JavaScript is the language of the web, and with its superpowers, you can create interactive and dynamic websites, games, and applications. Get ready to dive into the world of coding and bring your ideas to life with JavaScript!',
+    description:
+    'Welcome to our JavaScript coding course for kids! JavaScript is the language of the web, and with its superpowers, you can create interactive and dynamic websites, games, and applications. Get ready to dive into the world of coding and bring your ideas to life with JavaScript!',
     features: [
-      { title: 'Interactive Learning', description: 'Engaging and interactive lessons designed specifically for kids to learn JavaScript with ease.' },
-      { title: 'Hands-on Projects', description: 'Practice what you learn with fun projects that allow you to create your own interactive web pages and games.' },
-      { title: 'Expert Guidance', description: 'Receive personalized guidance from experienced instructors who will mentor you every step of the way.' },
-      { title: 'Creative Freedom', description: 'Explore your creativity and build anything you can imagine with the power of JavaScript.' },
+    {
+    title: 'Interactive Learning',
+    description:
+    'Engaging and interactive lessons designed specifically for kids to learn JavaScript with ease.',
+    },
+    {
+    title: 'Hands-on Projects',
+    description:
+    'Practice what you learn with fun projects that allow you to create your own interactive web pages and games.',
+    },
+    {
+    title: 'Expert Guidance',
+    description:
+    'Receive personalized guidance from experienced instructors who will mentor you every step of the way.',
+    },
+    {
+    title: 'Creative Freedom',
+    description:
+    'Explore your creativity and build anything you can imagine with the power of JavaScript.',
+    },
     ],
-    extraDescription: 'Join us on this exciting journey to unlock the magic of JavaScript and unleash your potential as a future web developer!',
+    extraDescription:
+    'Join us on this exciting journey to unlock the magic of JavaScript and unleash your potential as a future web developer!',
     ctaButton: {
-      label: 'Get Started',
+    label: 'Get Started',
     },
     downloadButton: {
-      label: 'Download Curriculum',
+    label: 'Download Curriculum',
     },
     rating: '4.6/5',
     contentTitle: 'What You Will Learn:',
     contentList: [
-      'Fundamentals of JavaScript programming',
-      'Working with variables, data types, and operators',
-      'Manipulating the DOM (Document Object Model) to create dynamic web pages',
-      'Implementing interactivity and event handling',
-      'Building basic web applications and games',
+    'Fundamentals of JavaScript programming',
+    'Working with variables, data types, and operators',
+    'Manipulating the DOM (Document Object Model) to create dynamic web pages',
+    'Implementing interactivity and event handling',
+    'Building basic web applications and games',
     ],
-  };
+    backgroundImage: {
+    src: '/page-bg.svg',
+    },
+    };
 
   const courseData = {
     title: 'JavaScript Coding for Kids',

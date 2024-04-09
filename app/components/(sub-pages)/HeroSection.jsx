@@ -6,7 +6,9 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = ({ hero }) => {
   return (
-    <div className="bg-gradient-to-r from-teal-200 to-teal-500 py-12 px-4 sm:px-6 md:px-12 relative">
+    <div className="bg-cover bg-center py-12 px-4 sm:px-6 md:px-12 relative" style={{
+      backgroundImage: `url(${hero.backgroundImage.src})`,
+    }}>
       {/* Mobile View */}
       <div className="block md:hidden">
         <div className="rounded-lg overflow-hidden">

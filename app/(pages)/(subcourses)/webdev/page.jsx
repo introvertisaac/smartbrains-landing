@@ -9,14 +9,32 @@ const HomePage = () => {
       alt: 'Web Development Hero Image',
     },
     title: 'Embark on a Journey into Web Development!',
-    description: 'Welcome to our web development course for kids! In this course, you will learn the building blocks of the web: HTML, CSS, and JavaScript. From designing web pages to adding interactivity and functionality, you will unleash your creativity and build amazing websites from scratch. Get ready to dive into the exciting world of coding!',
+    description:
+      'Welcome to our web development course for kids! In this course, you will learn the building blocks of the web: HTML, CSS, and JavaScript. From designing web pages to adding interactivity and functionality, you will unleash your creativity and build amazing websites from scratch. Get ready to dive into the exciting world of coding!',
     features: [
-      { title: 'Interactive Learning', description: 'Engaging and interactive lessons designed specifically for kids to learn web development concepts with ease.' },
-      { title: 'Hands-on Projects', description: 'Practice what you learn by building your own websites and web applications using HTML, CSS, and JavaScript.' },
-      { title: 'Expert Guidance', description: 'Receive personalized guidance from experienced instructors who will mentor you every step of the way.' },
-      { title: 'Creative Freedom', description: 'Explore your creativity and design unique and personalized websites that showcase your skills and interests.' },
+      {
+        title: 'Interactive Learning',
+        description:
+          'Engaging and interactive lessons designed specifically for kids to learn web development concepts with ease.',
+      },
+      {
+        title: 'Hands-on Projects',
+        description:
+          'Practice what you learn by building your own websites and web applications using HTML, CSS, and JavaScript.',
+      },
+      {
+        title: 'Expert Guidance',
+        description:
+          'Receive personalized guidance from experienced instructors who will mentor you every step of the way.',
+      },
+      {
+        title: 'Creative Freedom',
+        description:
+          'Explore your creativity and design unique and personalized websites that showcase your skills and interests.',
+      },
     ],
-    extraDescription: 'Join us on this exciting journey to discover the power of web development and unleash your potential as a future web developer!',
+    extraDescription:
+      'Join us on this exciting journey to discover the power of web development and unleash your potential as a future web developer!',
     ctaButton: {
       label: 'Get Started',
     },
@@ -32,6 +50,9 @@ const HomePage = () => {
       'Responsive Design: Make your websites look great on all devices',
       'Version Control: Learn how to manage and collaborate on your projects using Git and GitHub',
     ],
+    backgroundImage: {
+      src: '/page-bg.svg',
+    },
   };
 
   const courseData = {
