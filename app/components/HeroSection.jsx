@@ -100,9 +100,9 @@ const HeroSection = () => {
                 In Partnership With
               </h2>
               <div className="flex flex-row space-x-2 pt-2 gap-4">
-                <Image src="/kpsa.jpeg" alt="Logo 1" width={60} height={60} />{" "}
+                <Image src="/kpsa.png" alt="kpsa logo" width={60} height={60} />{" "}
                 {/* Logos */}
-                <Image src="/mastercard.jpeg" alt="Logo 2" width={60} height={60} />
+                <Image src="/mastercard.png" alt="mastercard foundation logo" width={60} height={60} />
               </div>
             </div>
           </div>

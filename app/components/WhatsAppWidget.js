@@ -9,13 +9,13 @@ const Whatsapp = () => {
         <WhatsAppWidget
             phoneNo="+254793474747"
             position="right"
-            widgetWidth="300px"
+            widgetWidth="500px"
             widgetWidthMobile="260px"
             autoOpen={true}
             autoOpenTimer={5000}
             messageBox={true}
             messageBoxTxt="Hi, When can we schedule a call ?"
-            iconSize="40"
+            iconSize="60"
             iconColor="white"
             iconBgColor="green"
             headerIcon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjjBC_8lg9zhTA_H9gg71mZB3e4OWi-SXNi91Kgek4A&s"
