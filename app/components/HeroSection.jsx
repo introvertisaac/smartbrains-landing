@@ -28,27 +28,27 @@ const HeroSection = () => {
       }
     }, stepTime);
 
-    // Initialize Lottie animation
-    // const lottieInstance = Lottie.loadAnimation({
-    //   container: lottieRef.current,
-    //   renderer: "svg",
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: require("../../public/anim3.json"),
-    // });
+    // Initialize Lottie sanimation
+    const lottieInstance = Lottie.loadAnimation({
+      container: lottieRef.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../../public/anim3.json"),
+    });
 
-    // const lottieInstance1 = Lottie.loadAnimation({
-    //   container: lottieRef1.current,
-    //   renderer: "svg",
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: require("../../public/anim3.json"),
-    // });
+    const lottieInstance1 = Lottie.loadAnimation({
+      container: lottieRef1.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../../public/anim3.json"),
+    });
 
     return () => {
       clearInterval(timer);
-      // lottieInstance.destroy();
-      // lottieInstance1.destroy(); // Destroy the Lottie animation instance
+      lottieInstance.destroy();
+      lottieInstance1.destroy(); // Destroy the Lottie animation instance
     };
   }, []);
 
@@ -130,14 +130,14 @@ const HeroSection = () => {
       </div>
 
       {/* Lottie animation container */}
-      {/* <div
+      <div
         ref={lottieRef}
         className="absolute bottom-[20%]  lg:right-10  w-10 h-10 lg:w-10 lg:h-10"
       />
       <div
         ref={lottieRef1}
         className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20  w-10 h-10 lg:w-20 lg:h-20"
-      /> */}
+      />
     </div>
   );
 };

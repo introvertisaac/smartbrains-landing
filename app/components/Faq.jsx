@@ -9,7 +9,7 @@ export default function Faq() {
   return (
     <>
       <section className="sm:max-w-[90%] lg:max-w-[90%] mx-auto py-20 px-4">
-        <h1 className="text-center  tracking-widest font-bold mb-8">
+        <h1 className="text-center text-3xl  tracking-widest font-bold mb-8">
           Frequently Asked Questions
         </h1>
 

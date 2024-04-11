@@ -18,15 +18,15 @@ import BackToTop from "./shared/BacktoTop";
 export default function Home() {
   return (
     <div className="relative">
-      {/* <div
+      <div
         className="absolute inset-0 -z-10 w-full"
         style={{
           backgroundImage: "url(/page-bg.svg)",
           backgroundRepeat: "repeat-y",
           backgroundSize: "100% auto",
-          opacity: 0.5,
+          opacity: 0.1,
         }}
-      /> */}
+      />
       <div className="relative z-10">
         {/* <Topbar /> */}
         <HeroSection />
