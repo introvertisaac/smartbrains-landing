@@ -8,6 +8,8 @@ import { FaFacebook } from "react-icons/fa";
 import { MdPhoneInTalk } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
+import {FaTiktok} from "react-icons/md"
+
 import Link from "next/link";
 
 function Footer() {
@@ -62,7 +64,7 @@ function Footer() {
             </button>
           </div>
           <Link href="https://sbs-tutor.web.app/" passHref>
-          <Button variant="link">Tutor Section</Button>
+            <Button variant="link">Tutor Section</Button>
           </Link>
           <div className="flex flex-col justify-center items-center pt-5">
             <div className="flex w-full justify-center items-center">
@@ -71,11 +73,24 @@ function Footer() {
               </p>
             </div>
             <div className="flex gap-8">
-              <FaInstagram className="text-3xl md:text-4xl cursor-pointer hover:text-yellow-600" />
-              <FaTwitter className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
-              <FaLinkedin className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
-              <FaFacebook className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
-              <FaYoutube className="text-3xl md:text-4xl cursor-pointer hover:text-red-600" />
+              <Link href="https://www.instagram.com/smartbrainke/" passHref>
+                <FaInstagram className="text-3xl md:text-4xl cursor-pointer hover:text-yellow-600" />
+              </Link>
+              <Link href="https://twitter.com/smartbrains_ke?lang=en" passHref>
+                <FaTwitter className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/smart-brains-kenya" passHref>
+                <FaLinkedin className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
+              </Link>
+              <Link href="https://www.facebook.com/Smartbrainske/" passHref>
+                <FaFacebook className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
+              </Link>
+              <Link href="https://www.youtube.com/channel/UCBx73yLTn24MbTCmd6lmXKA" passHref>
+                <FaYoutube className="text-3xl md:text-4xl cursor-pointer hover:text-red-600" />
+              </Link>
+              <Link href="https://www.youtube.com/channel/UCBx73yLTn24MbTCmd6lmXKA" passHref>
+                <FaTiktok className="text-3xl md:text-4xl cursor-pointer hover:text-red-600" />
+              </Link>
             </div>
           </div>
         </div>
