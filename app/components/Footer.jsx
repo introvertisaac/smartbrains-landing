@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { MdPhoneInTalk } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
@@ -60,7 +61,7 @@ function Footer() {
             </button>
           </div>
           <Button variant="link">Tutor Section</Button>
-          <div className="flex flex-col justify-center items-center pt-10">
+          <div className="flex flex-col justify-center items-center pt-5">
             <div className="flex w-full justify-center items-center">
               <p className="text-gray-600 text-xl md:text-xl mb-4">
                 Follow us on
@@ -70,6 +71,7 @@ function Footer() {
               <FaInstagram className="text-3xl md:text-4xl cursor-pointer hover:text-yellow-600" />
               <FaTwitter className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
               <FaLinkedin className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
+              <FaFacebook className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
               <FaYoutube className="text-3xl md:text-4xl cursor-pointer hover:text-red-600" />
             </div>
           </div>

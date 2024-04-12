@@ -130,8 +130,8 @@ const Navbar = () => {
       href: "/about",
       dropdown: [
         { label: "Our Story", href: "/about" },
-        { label: "Meet the Team", href: "/about/team" },
-        { label: "FAQs", href: "/about/faqs" },
+        // { label: "Meet the Team", href: "/about/team" },
+        // { label: "FAQs", href: "/about/faqs" },
       ],
     },
     {
@@ -139,8 +139,8 @@ const Navbar = () => {
       href: "/contact",
       dropdown: [
         { label: "Get in Touch", href: "/contact" },
-        { label: "Careers", href: "/contact/careers" },
-        { label: "Partnerships", href: "/contact/partnerships" },
+        // { label: "Careers", href: "/contact/careers" },
+        // { label: "Partnerships", href: "/contact/partnerships" },
       ],
     },
   ];
@@ -148,7 +148,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3  ${
-        isScrolled ? "bg-white rounded-xl mt-4 mx-4 py-2" : "bg-transparent"
+        isScrolled ? "bg-gray-50 rounded-xl mt-4 mx-4 py-2" : "bg-transparent"
       }`}
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -264,7 +264,7 @@ const Navbar = () => {
             className="block rounded-md text-base font-medium text-black"
           >
             <Button variant="destructive" size="xxxl" className="w-full">
-              Join Class
+              Student Section
             </Button>
           </Link>
         </div>
@@ -327,7 +327,7 @@ const Navbar = () => {
                   className="block rounded-md text-base font-medium text-black"
                 >
                   <Button variant="destructive" size="lg" className="w-full">
-                    Join Us1
+                    Join Us
                   </Button>
                 </Link>
                 <Link
@@ -337,7 +337,7 @@ const Navbar = () => {
                   className="block rounded-md text-base font-medium text-black"
                 >
                   <Button variant="destructive" size="lg" className="w-full">
-                    Contact Us1
+                    Contact Us
                   </Button>
                 </Link>
                 <Link
@@ -346,7 +346,7 @@ const Navbar = () => {
                   className="block rounded-md text-base font-medium text-black"
                 >
                   <Button variant="destructive" size="sm" className="w-full">
-                    Join Class1
+                  Student Section
                   </Button>
                 </Link>
                 <div className="mt-4 flex flex-col items-center text-black">
