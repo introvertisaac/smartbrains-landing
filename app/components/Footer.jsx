@@ -61,7 +61,7 @@ function Footer() {
               <i className="fas fa-envelope text-xl md:text-2xl"></i>
             </button>
           </div>
-          <Link href="/https://sbs-tutor.web.app/" passHref>
+          <Link href="https://sbs-tutor.web.app/" passHref>
           <Button variant="link">Tutor Section</Button>
           </Link>
           <div className="flex flex-col justify-center items-center pt-5">
