@@ -147,7 +147,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={` fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3  ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3  ${
         isScrolled ? "bg-white rounded-xl mt-4 mx-4 py-2" : "bg-transparent"
       }`}
       initial={{ y: -50, opacity: 0 }}
@@ -254,7 +254,8 @@ const Navbar = () => {
             className="rounded-md text-base font-medium text-black hidden lg:flex"
           >
             <Button variant="outline" size="xxxl" className="w-full">
-              Join Us
+              Join Us  
+              {/* <div className=""><ChevronRight className="ml-20 mr-0 h-6 w-6" /></div> */}
             </Button>
           </Link>
           <Link

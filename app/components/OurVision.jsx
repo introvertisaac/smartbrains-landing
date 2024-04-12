@@ -11,7 +11,7 @@ const OurVision = () => {
         <div className="w-full md:w-1/3 ">
           <Image
             src="/css.jpeg"
-            alt="Sketch to Real Life"
+            alt="Innovation and Creativity"
             width={800}
             height={600}
             className="w-full h-full object-cover"
@@ -20,12 +20,12 @@ const OurVision = () => {
 
         {/* Text Component */}
         <div className="md:w-2/3 bg-white text-black p-8 md:p-12 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold mb-4">From sketch to real life</h2>
+          <h2 className="text-3xl font-bold mb-4">Innovative Learning</h2>
           <p className="text-lg mb-8">
-            We create spaces that people want to be in. Since 2001 we have helped our clients and customers turn ideas and aspirations into reality. The basic philosophy of Lofticus is to create individual, questionally stunning design solutions for our customers by employing unique styles and architecture. Even if you don&apos;t have a really clear idea of what you want, we will help you to get the result you dreamed of.
+            We create learning environments that inspire curiosity and drive innovation. Since 2001, we have helped our clients transform their ideas into engaging spaces that foster growth and creativity. Our team uses unique styles and approaches to create custom design solutions for each project, ensuring every space is tailored to the specific needs and vision of our clients.
           </p>
           <p className="text-lg">
-            We feel that interior design is one of the most important investments you will ever make. Whether your needs are residential or commercial interior design, we are always there for a complete commitment to your project, so we can create a place you are comfortable to be in.
+            Whether you need a School-based, self-paced or virtual space designed for optimal productivity and learning, we are committed to delivering exceptional results that reflect your unique vision. Let us help you create spaces that enhance your experience and empower your journey.
           </p>
         </div>
       </div>
@@ -35,23 +35,23 @@ const OurVision = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-center">
             <FaAward className="text-blue-500 text-4xl mb-4" />
-            <h3 className="text-xl font-bold mb-2">15+</h3>
-            <p className="text-gray-600">Awards</p>
+            <h3 className="text-xl font-bold mb-2">10+</h3>
+            <p className="text-gray-600">Awards for Excellence</p>
           </div>
           <div className="flex flex-col items-center">
             <FaUserFriends className="text-blue-500 text-4xl mb-4" />
-            <h3 className="text-xl font-bold mb-2">300+</h3>
-            <p className="text-gray-600">Clients</p>
+            <h3 className="text-xl font-bold mb-2">90+</h3>
+            <p className="text-gray-600">Happy Clients</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div class="flex flex-col items-center">
             <FaClipboardList className="text-blue-500 text-4xl mb-4" />
             <h3 className="text-xl font-bold mb-2">10+</h3>
-            <p className="text-gray-600">Years</p>
+            <p className="text-gray-600">Years of Service</p>
           </div>
           <div className="flex flex-col items-center">
             <FaProjectDiagram className="text-blue-500 text-4xl mb-4" />
-            <h3 className="text-xl font-bold mb-2">1500</h3>
-            <p className="text-gray-600">Projects</p>
+            <h3 className="text-xl font-bold mb-2">15,000+</h3>
+            <p className="text-gray-600">Students</p>
           </div>
         </div>
       </div>

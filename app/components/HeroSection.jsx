@@ -107,9 +107,9 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl" onClick={handleClick}>
-            Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
+        <div className="pt-8 md:pt-4 w-full">
+          <Button variant="destructive" size="xxxl" onClick={handleClick}>
+            Join Us <ChevronRight className="ml-24 mr-20 h-6 w-6" />
           </Button>
         </div>
         
@@ -132,11 +132,11 @@ const HeroSection = () => {
       {/* Lottie animation container */}
       <div
         ref={lottieRef}
-        className="absolute bottom-[20%]  lg:right-10  w-10 h-10 lg:w-10 lg:h-10"
+        className="absolute bottom-[20%]  lg:right-10  w-10 h-10 lg:w-10 lg:h-10 -z-50"
       />
       <div
         ref={lottieRef1}
-        className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  lg:right-20  w-10 h-10 lg:w-20 lg:h-20"
+        className="text-green-200 absolute sm:left-1/3 lg:left-[60%] top-40  -z-50 lg:right-20  w-10 h-10 lg:w-20 lg:h-20"
       />
     </div>
   );

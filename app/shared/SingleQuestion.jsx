@@ -8,7 +8,7 @@ export default function SingleQuestion({ question, answer }) {
 
   return (
     <>
-      <div className="border-2  text-xl rounded-lg bg-white">
+      <div className="border-2  text-2xl rounded-lg bg-white">
         <article className="flex items-center justify-between p-2 lg:p-2">
           <h2 className="cursor-pointer" onClick={() => setShowAnswer(!showAnswer)}>
             {question}
