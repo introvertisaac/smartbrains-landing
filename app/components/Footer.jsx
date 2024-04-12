@@ -8,6 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { MdPhoneInTalk } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function Footer() {
   const handleCall = () => {
@@ -60,7 +61,9 @@ function Footer() {
               <i className="fas fa-envelope text-xl md:text-2xl"></i>
             </button>
           </div>
+          <Link href="/https://sbs-tutor.web.app/" passHref>
           <Button variant="link">Tutor Section</Button>
+          </Link>
           <div className="flex flex-col justify-center items-center pt-5">
             <div className="flex w-full justify-center items-center">
               <p className="text-gray-600 text-xl md:text-xl mb-4">
