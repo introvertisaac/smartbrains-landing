@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -99,10 +99,10 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -115,16 +115,21 @@ const Navbar = () => {
       label: "Courses",
       href: "/courses",
       dropdown: [
-        { label: "Web Development", href: "/courses/web-development" },
-        { label: "Data Science", href: "/courses/data-science" },
-        { label: "Machine Learning", href: "/courses/machine-learning" },
+        { label: "  HTML ", href: "/html" },
+        { label: " CSS ", href: "/css" },
+        { label: "Javascript Programming", href: "/Javascript" },
+        { label: "App Development", href: "/apps" },
+        { label: "Scratch Programming", href: "/Scratch" },
+        { label: "Python for Kids", href: "/Python" },
+        { label: "Robotics and Machine Learning", href: "/Robotics" },
+        { label: "Game Development", href: "/gamedev" },
       ],
     },
     {
       label: "About",
       href: "/about",
       dropdown: [
-        { label: "Our Story", href: "/about/our-story" },
+        { label: "Our Story", href: "/about" },
         { label: "Meet the Team", href: "/about/team" },
         { label: "FAQs", href: "/about/faqs" },
       ],
@@ -142,11 +147,9 @@ const Navbar = () => {
 
   return (
     <motion.nav
-    className={` fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 ${
-      isScrolled
-        ? 'bg-white rounded-xl mt-4 mx-4 py-2'
-        : 'bg-transparent'
-    }`}
+      className={` fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3  ${
+        isScrolled ? "bg-white rounded-xl mt-4 mx-4 py-2" : "bg-transparent"
+      }`}
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
@@ -243,15 +246,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Buttons */}
+        {/* Desktop Buttons */}
         <div className="flex justify-between gap-2">
           <Link
             href="/contact"
             target="_blank"
-            className="rounded-md text-base font-medium text-black"
+            className="rounded-md text-base font-medium text-black hidden lg:flex"
           >
             <Button variant="outline" size="xxxl" className="w-full">
-              Join Us 
+              Join Us
             </Button>
           </Link>
           <Link
@@ -266,6 +269,8 @@ const Navbar = () => {
         </div>
       </div>
 
+
+      {/* desktop links */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -278,9 +283,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div
-              className="fixed inset-y-0 left-0 z-100 w-auto h-full bg-white overflow-y-auto mobile-menu transition-all duration-300"
-            >
+            <div className="fixed inset-y-0 left-0 z-100 w-auto h-full bg-white overflow-y-auto mobile-menu transition-all duration-300">
               <div className="flex justify-center py-4">
                 <Link href="/" target="_blank">
                   <img className="h-8 w-auto" src="/logo.png" alt="Logo" />
@@ -323,7 +326,7 @@ const Navbar = () => {
                   className="block rounded-md text-base font-medium text-black"
                 >
                   <Button variant="destructive" size="lg" className="w-full">
-                    Join Us
+                    Join Us1
                   </Button>
                 </Link>
                 <Link
@@ -333,7 +336,7 @@ const Navbar = () => {
                   className="block rounded-md text-base font-medium text-black"
                 >
                   <Button variant="destructive" size="lg" className="w-full">
-                    Contact Us
+                    Contact Us1
                   </Button>
                 </Link>
                 <Link
@@ -342,11 +345,14 @@ const Navbar = () => {
                   className="block rounded-md text-base font-medium text-black"
                 >
                   <Button variant="destructive" size="sm" className="w-full">
-                    Join Class
+                    Join Class1
                   </Button>
                 </Link>
                 <div className="mt-4 flex flex-col items-center text-black">
-                  <a href="tel:+254793474747" className="mr-4 text-sm font-medium">
+                  <a
+                    href="tel:+254793474747"
+                    className="mr-4 text-sm font-medium"
+                  >
                     +254 793 47 47 47
                   </a>
                   <a

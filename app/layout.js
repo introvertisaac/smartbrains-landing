@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-sans">
-        <Topbar />
-        {/* <Navbar /> */}
+       <div className="mb-10 "><Topbar /></div> 
+       
         <Template>
           <main>{children}</main>
         </Template>

@@ -21,10 +21,10 @@ export default function Home() {
       <div
         className="absolute inset-0 -z-10 w-full"
         style={{
-          backgroundImage: "url(/page-bg.svg)",
+          backgroundImage: "url(/bg.svg)",
           backgroundRepeat: "repeat-y",
           backgroundSize: "100% auto",
-          opacity: 0.1,
+          opacity: 0.3,
         }}
       />
       <div className="relative z-10">
