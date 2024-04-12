@@ -8,7 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { MdPhoneInTalk } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
-import {FaTiktok} from "react-icons/md"
+import {FaTiktok} from "react-icons/fa"
 
 import Link from "next/link";
 
