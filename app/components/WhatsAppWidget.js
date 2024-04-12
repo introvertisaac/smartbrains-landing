@@ -9,7 +9,7 @@ const Whatsapp = () => {
         <WhatsAppWidget
             phoneNo="+254793474747"
             position="right"
-            widgetWidth="300px"
+            widgetWidth="360px"
             widgetWidthMobile="260px"
             autoOpen={true}
             autoOpenTimer={5000}
