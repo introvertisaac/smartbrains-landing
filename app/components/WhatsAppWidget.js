@@ -18,7 +18,7 @@ const Whatsapp = () => {
             iconSize="60"
             iconColor="white"
             iconBgColor="green"
-            headerIcon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjjBC_8lg9zhTA_H9gg71mZB3e4OWi-SXNi91Kgek4A&s"
+            headerIcon="/logo.png"
             headerIconColor="pink"
             headerTxtColor="white"
             headerBgColor="#003585"
