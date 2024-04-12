@@ -73,22 +73,22 @@ function Footer() {
               </p>
             </div>
             <div className="flex gap-8">
-              <Link href="https://www.instagram.com/smartbrainke/" passHref>
+              <Link href="https://www.instagram.com/smartbrainke/" target="_blank" passHref>
                 <FaInstagram className="text-3xl md:text-4xl cursor-pointer hover:text-yellow-600" />
               </Link>
-              <Link href="https://twitter.com/smartbrains_ke?lang=en" passHref>
+              <Link href="https://twitter.com/smartbrains_ke?lang=en" target="_blank" passHref>
                 <FaTwitter className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
               </Link>
-              <Link href="https://www.linkedin.com/company/smart-brains-kenya" passHref>
+              <Link href="https://www.linkedin.com/company/smart-brains-kenya" target="_blank" passHref>
                 <FaLinkedin className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
               </Link>
-              <Link href="https://www.facebook.com/Smartbrainske/" passHref>
+              <Link href="https://www.facebook.com/Smartbrainske/" target="_blank" passHref>
                 <FaFacebook className="text-3xl md:text-4xl cursor-pointer hover:text-blue-600" />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCBx73yLTn24MbTCmd6lmXKA" passHref>
+              <Link href="https://www.youtube.com/channel/UCBx73yLTn24MbTCmd6lmXKA" target="_blank" passHref>
                 <FaYoutube className="text-3xl md:text-4xl cursor-pointer hover:text-red-600" />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCBx73yLTn24MbTCmd6lmXKA" passHref>
+              <Link href="https://www.tiktok.com/@smartbrainske" target="_blank" passHref>
                 <FaTiktok className="text-3xl md:text-4xl cursor-pointer hover:text-red-600" />
               </Link>
             </div>

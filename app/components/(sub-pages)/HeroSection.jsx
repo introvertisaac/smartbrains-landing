@@ -35,7 +35,7 @@ const HeroSection = ({ hero }) => {
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="p-6 space-y-4">
               <div className="flex justify-between items-center">
-              <Link href="/contact" passHref>
+              <Link href="/contact" target="_blank" passHref>
                 <Button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
                   {hero.ctaButton.label}
                 </Button>
@@ -92,9 +92,11 @@ const HeroSection = ({ hero }) => {
           </div>
           <div className="p-6 space-y-4">
             <div className="flex flex-col space-y-2">
+            <Link href="/contact" target="_blank" passHref>
               <Button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
                 {hero.ctaButton.label}
               </Button>
+              </Link>
               <Button variant="link" className="text-red-600 flex items-center hover:text-gray-800 transition-colors duration-300">
                 <MdDownload className="mr-2" />
                 {hero.downloadButton.label}
