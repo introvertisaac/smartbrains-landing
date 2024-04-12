@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -170,9 +171,11 @@ const Courses = () => {
         </div>
       </div>
       <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl" onClick={handleClick}>
+      <Link href="/contact" passHref>
+          <Button variant="destructive" size="xxl" href="/contact">
             Join Us 
           </Button>
+          </Link>
         </div>
     </div>
   );

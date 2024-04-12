@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { IoIosArrowForward } from "react-icons/io";
 import { ChevronRight } from "lucide-react";
 import Lottie from "lottie-web";
+import Link from 'next/link';
 // import animationData from "../public/lottie.json";
 
 const HeroSection = () => {
@@ -108,9 +109,11 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="pt-8 md:pt-4 w-full">
-          <Button variant="destructive" size="xxxl" onClick={handleClick}>
+        <Link href="/contact" passHref>
+          <Button variant="destructive" size="xxxl" href="/contact">
             Join Us <ChevronRight className="ml-24 mr-20 h-6 w-6" />
           </Button>
+          </Link>
         </div>
         
       </div>

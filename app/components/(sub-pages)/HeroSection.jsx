@@ -3,6 +3,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const HeroSection = ({ hero }) => {
   return (
@@ -34,9 +35,11 @@ const HeroSection = ({ hero }) => {
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="p-6 space-y-4">
               <div className="flex justify-between items-center">
+              <Link href="/contact" passHref>
                 <Button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300">
                   {hero.ctaButton.label}
                 </Button>
+                </Link>
                 <Button variant="link" className="text-red-600 flex items-center hover:text-gray-800 transition-colors duration-300">
                   <MdDownload className="mr-2" />
                   {hero.downloadButton.label}

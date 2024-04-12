@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const HeroCard = ({
   title,
@@ -64,9 +65,11 @@ const HeroCard = ({
           </div>
         </div>
         <div className="pt-8 md:pt-4">
-          <Button variant="destructive" size="xxl" onClick={handleClick}>
+        <Link href="/contact" passHref>
+          <Button variant="destructive" size="xxl" href="/contact">
             Join Us <ChevronRight className="ml-20 mr-0 h-6 w-6" />
           </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -253,7 +253,7 @@ const Navbar = () => {
             target="_blank"
             className="rounded-md text-base font-medium text-black hidden lg:flex"
           >
-            <Button variant="outline" size="xxxl" className="w-full">
+            <Button variant="outline" size="xxxl" className="w-full" href="/contact">
               Join Us  
               {/* <div className=""><ChevronRight className="ml-20 mr-0 h-6 w-6" /></div> */}
             </Button>
@@ -326,7 +326,7 @@ const Navbar = () => {
                   target="_blank"
                   className="block rounded-md text-base font-medium text-black"
                 >
-                  <Button variant="destructive" size="lg" className="w-full">
+                  <Button variant="destructive" size="lg" className="w-full" href="/contact">
                     Join Us
                   </Button>
                 </Link>
